@@ -22,5 +22,6 @@ new Waypoint({
     countStart();
     //this.destroy() //for once
   },
-  offset: "60%",
+  offset: "90%",
+  triggerOnce: true,
 });

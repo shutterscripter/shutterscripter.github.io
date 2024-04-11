@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <!-- nav bar starts -->
@@ -30,7 +31,7 @@
             Mobile app Developer
           </h1>
           <p>
-            Currently pursuing my Bachelor's in Engineering from GCORARA, my
+            Currently pursuing my Bachelor's in Engineering from GCOEARA, my
             primary focus lies in Flutter development with a strong emphasis on
             clean architecture and efficient state management techniques.
           </p>
@@ -89,7 +90,13 @@
 
     <!-- Skills section starts -->
     <section>
-      <div class="skill-main">
+      <div
+        class="skill-main"
+        data-aos-delay="0"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        data-aos-offset="15l̥0"
+      >
         <div class="skill-heading">Skills</div>
         <div class="skill-card-list">
           <div class="skill-card-01">
@@ -191,52 +198,39 @@
     <section>
       <div class="some-projects">
         <div class="title-and-button">
-          <div class="heading-projects">
+          <div
+            class="heading-projects"
+            data-aos-delay="0"
+            data-aos="flip-up"
+            data-aos-duration="400"
+            data-aos-offset="250"
+          >
             <h1>Some projects</h1>
-            <a href="">View all Projects</a>
+            <a href="https://github.com/shutterscripter?tab=repositories"
+              >View all Projects</a
+            >
           </div>
-          <div class="arrows">
+          <!-- <div class="arrows">
             <img src="/assets/images/slider-arrow-left.png" alt="" />
             <img src="/assets/images/slider-arrow-right.png" alt="" />
-          </div>
+          </div> -->
         </div>
         <!-- actual project info -->
         <div class="projects">
           <!-- one project card -->
-
-          <div class="project-card">
-            <div class="project-image">
-              <div>
-                <figure>
-                  <img src="/assets/images/temp_image.png" alt="" />
-                </figure>
-              </div>
-            </div>
-            <div class="project-info">
-              <h3 project-heading>Flutter Press</h3>
-              <p class="project-desc">
-                A Flutter application, a dynamic platform designed to deliver
-                real-time news updates sourced from an open news API. Featuring
-                an intuitive user interface and advanced features, the app
-                offers users access to the latest headlines and articles,
-                intelligently summarized for quick consumption. Built upon a
-                robust clean architecture, the app ensures seamless performance
-                and scalability while boasting features such as search
-                functionality, pull-to-refresh for instant updates, and the
-                ability to save favorite articles for future reference.
-              </p>
-              <p class="project-tech-stack">
-                Tech Stack : Flutter , RoomDB , API.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
     <!-- Project section ends -->
 
     <!-- Number section starts -->
-    <section class="level">
+    <section
+      class="level"
+      data-aos-delay="100"
+      data-aos="fade-in"
+      data-aos-duration="1000"
+      data-aos-offset="0"
+    >
       <div class="achievements">
         <div class="web-views">
           <h2 class="title js-count-up" data-value="197"></h2>
@@ -267,30 +261,88 @@
     <!-- Number section ends -->
 
     <!-- Latest article section -->
-    <section>
+    <section class="articles">
       <div class="latest-articles">
-        <h1>Latest Articles</h1>
-        <p>
+        <h1
+          data-aos-delay="300"
+          data-aos="flip-up"
+          data-aos-duration="1000"
+          data-aos-offset="0"
+        >
+          Latest Articles
+        </h1>
+        <p
+          data-aos-delay="300"
+          data-aos="flip-up"
+          data-aos-duration="1000"
+          data-aos-offset="0"
+        >
           These Article show cased my other expertise than skills mentioned in
           skill section.
         </p>
 
         <!-- actual articles -->
         <div class="article-list">
-          <div class="art-01">
-            <h1 class="art-01-h1">Python / Jan 24, 2024</h1>
-            <p class="art-01-p">How To Install A Package Inside Virtualenv?</p>
-          </div>
-          <div class="art-02">
-            <h1 class="art-01-h1">MongoDB / Dec 29, 2023</h1>
-            <p class="art-01-p">MongoDB Terminology</p>
-          </div>
-          <div class="art-03">
-            <h1 class="art-01-h1">Python / Jul 31, 2023</h1>
-            <p class="art-01-p">Scrape a popup using python and selenium</p>
-          </div>
+          <!-- article 1 -->
+          <a
+            href="https://www.geeksforgeeks.org/how-to-install-a-package-inside-virtualenv/"
+            class="article-link"
+          >
+            <div class="art-01" data-aos="flip-up" data-aos-duration="1000">
+              <h1 class="art-01-h1" style="color: grey">
+                Python / Jan 24, 2024
+              </h1>
+              <p class="art-01-p" style="color: white">
+                How To Install A Package Inside Virtualenv?
+              </p>
+            </div>
+          </a>
+
+          <!-- article 2 -->
+          <a
+            href="https://www.geeksforgeeks.org/mongodb-terminology/"
+            class="article-link"
+          >
+            <div
+              class="art-02"
+              data-aos-delay="100"
+              data-aos="flip-up"
+              data-aos-duration="1000"
+            >
+              <h1 class="art-01-h1" style="color: grey">
+                MongoDB / Dec 29, 2023
+              </h1>
+              <p class="art-01-p" style="color: white">MongoDB Terminology</p>
+            </div>
+          </a>
+
+          <!-- article 3 -->
+          <a
+            href="https://www.geeksforgeeks.org/scrape-a-popup-using-python-and-selenium/"
+            class="article-link"
+          >
+            <div
+              class="art-03"
+              data-aos-delay="200"
+              data-aos="flip-up"
+              data-aos-duration="1000"
+            >
+              <h1 class="art-01-h1" style="color: grey">
+                Python / Jul 31, 2023
+              </h1>
+              <p class="art-01-p" style="color: white">
+                Scrape a popup using python and selenium
+              </p>
+            </div>
+          </a>
         </div>
-        <div class="view-all-articles">
+        <div
+          class="view-all-articles"
+          data-aos-delay="300"
+          data-aos="flip-up"
+          data-aos-duration="1000"
+          data-aos-offset="0"
+        >
           <button class="lButton13" id="view-all-articles">
             View all articles
           </button>
@@ -305,10 +357,18 @@
       <p>©2024, Jayesh Shinde</p>
     </section>
     <!-- footer ends -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="/assets/js/skill_bar.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="/assets/js/projects_list.js"></script>
     <script type="module" src="/assets/js/counter.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 200,
+      });
+    </script>
   </body>
 </html>

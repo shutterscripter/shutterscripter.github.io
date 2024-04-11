@@ -14,3 +14,5 @@ getInTouch.addEventListener("click", function () {
   //   write email to "jay2272001@gmail.com"
   window.location.href = "mailto:jay2272001@gmail.com";
 });
+
+
