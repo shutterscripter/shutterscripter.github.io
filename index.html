@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jayesh Shinde</title>
     <link rel="stylesheet" href="/assets/css/index_page.css" />
+    <link rel="stylesheet" href="/assets/css/footer.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,12 +13,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/3b161c540c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- nav bar starts -->
-    <nav>
+    <nav class="navbar">
       <div class="circle-avatar">
-        <h1 class="nav-logo">JS</h1>
+        <h1 class="nav-logo">JS.</h1>
       </div>
     </nav>
     <!-- nav bar ends -->
@@ -26,16 +37,17 @@
     <section>
       <div class="intro">
         <div class="info">
-          <h1>
-            Jayesh Shinde <br />
-            Mobile app Developer
-          </h1>
-          <p>
-            Currently pursuing my Bachelor's in Engineering from GCOEARA, my
-            primary focus lies in Flutter development with a strong emphasis on
-            clean architecture and efficient state management techniques.
-          </p>
-          <br />
+          <p class="android">App Developer</p>
+          <h1>Jayesh Shinde</h1>
+          <div class="divider-desc">
+            <div class="vertical-divider"></div>
+            <p>
+              Currently pursuing my Bachelor's in Engineering from GCOEARA, my
+              primary focus lies in Flutter development with a strong emphasis
+              on clean architecture and efficient state management techniques.
+            </p>
+          </div>
+
           <button type="submit" id="btn-contact-me">Get In Touch</button>
         </div>
 
@@ -90,16 +102,24 @@
 
     <!-- Skills section starts -->
     <section>
-      <div
-        class="skill-main"
-        data-aos-delay="0"
-        data-aos="zoom-in"
-        data-aos-duration="1000"
-        data-aos-offset="15l̥0"
-      >
-        <div class="skill-heading">Skills</div>
+      <div class="skill-main">
+        <div
+          class="skill-heading"
+          data-aos-delay="0"
+          data-aos="fade-in"
+          data-aos-duration="1000"
+          data-aos-offset="150"
+        >
+          Skills
+        </div>
         <div class="skill-card-list">
-          <div class="skill-card-01">
+          <div
+            class="skill-card-01"
+            data-aos-delay="0"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-offset="150"
+          >
             <div class="skill">
               <p>Java</p>
               <div class="skill-container">
@@ -129,7 +149,13 @@
               </div>
             </div>
           </div>
-          <div class="skill-card-01">
+          <div
+            class="skill-card-01"
+            data-aos-delay="0"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-offset="150"
+          >
             <!-- Flutter -->
             <div class="skill">
               <p>Flutter</p>
@@ -159,7 +185,13 @@
               </div>
             </div>
           </div>
-          <div class="skill-card-01">
+          <div
+            class="skill-card-01"
+            data-aos-delay="0"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-offset="150"
+          >
             <!-- Git/GitHub -->
             <div class="skill">
               <p>Git/GitHub</p>
@@ -201,9 +233,9 @@
           <div
             class="heading-projects"
             data-aos-delay="0"
-            data-aos="flip-up"
-            data-aos-duration="400"
-            data-aos-offset="250"
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            data-aos-offset="150"
           >
             <h1>Some projects</h1>
             <a href="https://github.com/shutterscripter?tab=repositories"
@@ -233,15 +265,15 @@
     >
       <div class="achievements">
         <div class="web-views">
-          <h2 class="title js-count-up" data-value="197"></h2>
+          <h2 class="title js-count-up" data-value="1"></h2>
           <p class="heading"><br />Web site <br />Views</p>
         </div>
         <div class="github-repos">
-          <h2 class="title js-count-up" data-value="25"></h2>
+          <h2 class="title js-count-up" data-value="28"></h2>
           <p><br />GitHub <br />Repositories</p>
         </div>
         <div class="leetcode">
-          <h2 class="title js-count-up" data-value="220"></h2>
+          <h2 class="title js-count-up" data-value="244"></h2>
           <p>
             LeetCode <br />
             Problem <br />
@@ -249,7 +281,7 @@
           </p>
         </div>
         <div class="github-contributions">
-          <h2 class="title js-count-up" data-value="61"></h2>
+          <h2 class="title js-count-up" data-value="125"></h2>
           <p>
             <br />
             GitHub <br />
@@ -285,6 +317,25 @@
         <div class="article-list">
           <!-- article 1 -->
           <a
+            href="https://www.geeksforgeeks.org/automatic-license-number-plate-recognition-system/"
+            class="article-link"
+          >
+            <div
+              class="art-01"
+              data-aos-delay="100"
+              data-aos="flip-up"
+              data-aos-duration="1000"
+            >
+              <h1 class="art-01-h1" style="color: grey">
+                Python | DS / Apr 23, 2024
+              </h1>
+              <p class="art-01-p" style="color: white">
+                Automatic Number Plate Recognition System using EasyOCR
+              </p>
+            </div>
+          </a>
+          <!-- article 2 -->
+          <a
             href="https://www.geeksforgeeks.org/how-to-install-a-package-inside-virtualenv/"
             class="article-link"
           >
@@ -295,24 +346,6 @@
               <p class="art-01-p" style="color: white">
                 How To Install A Package Inside Virtualenv?
               </p>
-            </div>
-          </a>
-
-          <!-- article 2 -->
-          <a
-            href="https://www.geeksforgeeks.org/mongodb-terminology/"
-            class="article-link"
-          >
-            <div
-              class="art-02"
-              data-aos-delay="100"
-              data-aos="flip-up"
-              data-aos-duration="1000"
-            >
-              <h1 class="art-01-h1" style="color: grey">
-                MongoDB / Dec 29, 2023
-              </h1>
-              <p class="art-01-p" style="color: white">MongoDB Terminology</p>
             </div>
           </a>
 
@@ -352,10 +385,51 @@
     <!-- Latest article section ends -->
 
     <!-- footer starts -->
-    <section class="footer">
-      <hr />
-      <p>©2024, Jayesh Shinde</p>
-    </section>
+    <footer
+      class="footer"
+      data-aos-delay="300"
+      data-aos="flip-up"
+      data-aos-duration="1000"
+      data-aos-offset="0"
+    >
+      <div class="container row">
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>
+              <a
+                href="https://maps.app.goo.gl/rkRrCzUWkohctrA17"
+                target="_blank"
+                >Pune, Maharashtra - 412307</a
+              >
+            </li>
+            <li><a href="tel:+918554931251">+91 8554931251</a></li>
+            <li>
+              <a href="mailto:jay2272001@gmail.com">jay2272001@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col"></div>
+        <div class="footer-col"></div>
+        <div class="footer-col">
+          <h4>follow on</h4>
+          <div class="social-links">
+            <a href="https://twitter.com/shutterscripter" target="_blank"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/jayeshshinde2001/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a href="https://github.com/shutterscripter" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- footer ends -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
