@@ -20,7 +20,7 @@ var data = [
     description:
       "DialTrack is an Android application that not only <b>manages and organizes the user's call log history</b>, but also provides a feature for <b>automatic calling via CSV files</b>. The app offers a range of features, including the ability to view and filter call logs based on various criteria such as incoming, outgoing, and missed calls. Additionally, it allows users to automate their calling process by importing contacts from CSV files. With its intuitive user interface, robust functionality, and advanced features like automatic calling.",
     techStack: "<b>Tech Stack :</b> Flutter, Firebase, Dart, GetX  ",
-    image: "/assets/images/dialtrack.jpg",
+    image: "./assets/images/dialtrack.jpg",
     link: "#",
   },
 ];
