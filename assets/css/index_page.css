@@ -145,11 +145,11 @@ nav {
   align-items: center;
   margin-top: 0.1rem;
 }
-.scroll-section img {
+.scroll-section i {
   width: 20px;
   height: 20px;
   margin-top: 5rem;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 /* Skills section starts */
@@ -665,10 +665,10 @@ nav {
     align-items: center;
     padding: 2rem;
   }
-  .programming_lan_img{
+  .programming_lan_img {
     width: 1.5rem;
   }
-  .more_img{
+  .more_img {
     width: 1rem;
   }
 
