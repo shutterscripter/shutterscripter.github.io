@@ -53,3 +53,11 @@ a.forEach((item) => {
     cursor.classList.remove("hover");
   });
 });
+
+// detect right click on the page
+// document.addEventListener("contextmenu", function (e) {
+//   e.preventDefault();
+//   // custom dialog box with message
+//   alert("Right Click Disabled");
+//   s;
+// });

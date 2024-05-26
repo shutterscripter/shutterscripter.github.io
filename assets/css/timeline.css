@@ -30,7 +30,7 @@ ul.timeline:before {
 .event {
   position: relative;
   padding: 16px;
-  background: white;
+  background: #343a40;
   border-radius: 5px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 2px 1px -1px rgba(0, 0, 0, 0.12);
@@ -54,7 +54,7 @@ ul.timeline .event:before {
   font-size: 1.5em;
   margin-top: 0;
   margin-bottom: 10px;
-  color: #000;
+  color: #ffffff;
 }
 .time {
   position: absolute;
