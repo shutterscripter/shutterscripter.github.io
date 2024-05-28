@@ -58,6 +58,11 @@ a.forEach((item) => {
 // document.addEventListener("contextmenu", function (e) {
 //   e.preventDefault();
 //   // custom dialog box with message
-//   alert("Right Click Disabled");
-//   s;
+//   Swal.fire({
+
+//     position: "top-end",
+//     icon: "success",
+//     title: "Your work has been saved",
+//     showConfirmButton: false,
+//   });
 // });

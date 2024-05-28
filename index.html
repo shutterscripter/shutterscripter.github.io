@@ -50,6 +50,12 @@
       href="assets/images/favicons/favicon-16x16.png"
     />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css"
+    />
   </head>
   <body>
     <!-- nav bar starts -->
@@ -505,15 +511,15 @@
     >
       <div class="achievements">
         <div class="web-views">
-          <h2 class="title js-count-up" data-value="1"></h2>
+          <h2 class="title js-count-up wv" data-value=""></h2>
           <p class="heading"><br />Web site <br />Views</p>
         </div>
         <div class="github-repos">
-          <h2 class="title js-count-up" data-value="28"></h2>
+          <h2 class="title js-count-up gr" data-value=""></h2>
           <p><br />GitHub <br />Repositories</p>
         </div>
         <div class="leetcode">
-          <h2 class="title js-count-up" data-value="244"></h2>
+          <h2 class="title js-count-up lc" data-value=""></h2>
           <p>
             LeetCode <br />
             Problem <br />
@@ -521,7 +527,7 @@
           </p>
         </div>
         <div class="github-contributions">
-          <h2 class="title js-count-up" data-value="125"></h2>
+          <h2 class="title js-count-up gc" data-value=""></h2>
           <p>
             <br />
             GitHub <br />
@@ -689,5 +695,7 @@
         offset: 200,
       });
     </script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script type="module" src="./assets/js/firebase_crud.js"></script>
   </body>
 </html>
