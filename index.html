@@ -13,6 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,10 +30,6 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/3b161c540c.js"
-      crossorigin="anonymous"
-    ></script>
 
     <!-- Favicon -->
     <link
@@ -58,79 +58,31 @@
     />
   </head>
   <body>
-    <!-- nav bar starts -->
-    <nav class="navbar">
-      <div class="circle-avatar">
-        <h1 class="nav-logo">JS.</h1>
-      </div>
-    </nav>
-    <!-- nav bar ends -->
-
     <!-- Intro section starts -->
     <section>
       <div class="intro">
         <div class="info">
-          <p class="android">App Developer</p>
+          <p class="self-title">Embedded Engineer</p>
           <h1>Jayesh Shinde</h1>
           <div class="divider-desc">
             <div class="vertical-divider"></div>
             <p>
-              Currently pursuing my Bachelor's in Engineering from GCOEARA, my
-              primary focus lies in Flutter development with a strong emphasis
-              on clean architecture and efficient state management techniques.
+              Innovating Embedded Systems | Elevating Flutter Development 🚀
+              <br />
+              Transforming the embedded world with my unique vision and pace.
+              Passionate about Flutter development, I specialize in clean
+              architecture and efficient state management to build seamless,
+              high-performance applications.
             </p>
           </div>
 
           <button type="submit" id="btn-contact-me">Get In Touch</button>
         </div>
-
-        <div class="media">
-          <!-- linkedin -->
-          <div class="social">
-            <a
-              href="https://www.linkedin.com/in/jayeshshinde2001/"
-              target="_blank"
-            >
-              <img src="assets/images/social_logos/linkedin_icon.png" alt="" />
-            </a>
-          </div>
-
-          <!-- twitter -->
-          <div class="social">
-            <a href="https://twitter.com/shutterscripter" target="_blank">
-              <img src="assets/images/social_logos/twitter_icon.png" alt="" />
-            </a>
-          </div>
-
-          <!-- leetcode -->
-          <div class="social">
-            <a href="https://leetcode.com/jay2272001/" target="_blank">
-              <img src="assets/images/social_logos/leetcode_icon.png" alt="" />
-            </a>
-          </div>
-
-          <!-- gfg -->
-          <div class="social">
-            <a
-              href="https://auth.geeksforgeeks.org/user/jayesh_shinde22/"
-              target="_blank"
-            >
-              <img src="assets/images/social_logos/gfg_icon.png" alt="" />
-            </a>
-          </div>
-
-          <!-- github -->
-          <div class="social">
-            <a href="https://github.com/shutterscripter" target="_blank">
-              <img src="assets/images/social_logos/github_icon.png" alt="" />
-            </a>
-          </div>
-        </div>
       </div>
       <div class="scroll-section">
         <!-- <img src="assets/images/scroll_icon.png" alt="" class="illustration" /> -->
         <i
-          class="fa-solid fa-computer-mouse illustration"
+          class="fa-solid fa-computer-mouse mouse-more"
           style="color: #ffffff"
         ></i>
       </div>
@@ -396,9 +348,11 @@
             data-aos-duration="1000"
             data-aos-offset="150"
           >
-            <h1>Some projects</h1>
-            <a href="https://github.com/shutterscripter?tab=repositories"
-              >View all Projects</a
+            <h1>Work : Projects</h1>
+            <a
+              class="view-projects-link"
+              href="https://github.com/shutterscripter?tab=repositories"
+              >View all Projects></a
             >
           </div>
           <!-- <div class="arrows">
@@ -416,88 +370,106 @@
 
     <!-- TimeLine  starts -->
     <section class="timeline-section">
-      <div class="education-timeline">
-        <!-- Edication TImelineSection  starts-->
-        <div class="education-timeline-container">
-          <h3 class="timeline-main-heading">Education</h3>
+      <!-- Edication TImelineSection  starts-->
+      <div class="education-timeline-container">
+        <h3 class="timeline-main-heading">Education</h3>
 
-          <ul class="timeline">
-            <li class="event">
-              <div class="left-arrow"></div>
-              <div class="time">
-                2019 - Current <span class="glyphicon glyphicon-time"></span>
-              </div>
-              <h3 class="timeline-item-heading">BE in Computer Engineering</h3>
-              <div class="description">
-                <p>Government College of Engineering and Research</p>
-                <h5>CGPA: 9.13</h5>
-              </div>
-            </li>
-            <!-- Diploma -->
-            <li class="event">
-              <div class="left-arrow"></div>
-              <div class="time">
-                2019 - 2022 <span class="glyphicon glyphicon-time"></span>
-              </div>
-              <h3 class="timeline-item-heading">
-                Diploma in Computer Engineering
-              </h3>
-              <div class="description">
-                <p>Cusrow Wadia Institute of Technology</p>
-                <h5>Percentage: 97.53%</h5>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <!-- Edication TImelineSection  ends-->
-        <!-- Experience TImeline section starts -->
-
-        <div class="edication-timeline-container">
-          <h3 class="timeline-main-heading">Experience</h3>
-          <ul class="timeline">
-            <li class="event">
-              <div class="left-arrow"></div>
-              <div class="time">
-                Dec - May
-                <span class="glyphicon glyphicon-time"><br />2024</span>
-              </div>
-              <h3 class="timeline-item-heading">Flutter Developer Intern</h3>
-              <div class="description">
-                <p>OyeBusy Technologies Pvt.Ltd</p>
-                <h5>
-                  Developed two Flutter apps simultaneously, enhancing the
-                  OyeBusy-Partner app by Implementing State Management <br />
-                  Hands on experience with tech stack like Flutter, Google
-                  Firebase, Dart, GetX, API, Figma, etc.
-                </h5>
-              </div>
-            </li>
-
-            <!-- Rudraksha Foundation -->
-
-            <li class="event">
-              <div class="left-arrow"></div>
-              <div class="time">
-                Dec - May
-                <span class="glyphicon glyphicon-time"><br />2024</span>
-              </div>
-              <h3 class="timeline-item-heading">
-                Android App Developer Intern
-              </h3>
-              <div class="description">
-                <p>Rudraksha Foundation</p>
-                <h5>
-                  Worked on the android app, Implemented Responsive designs
-                  using XML. <br />
-                  Hands on experience with tech stack like Android, XML, Java,
-                  Google Firebase, Figma, etc.
-                </h5>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <!-- Experience TImeline section ends -->
+        <ul class="timeline">
+          <li class="event">
+            <div class="left-arrow"></div>
+            <div class="time">
+              2022 - 2025 <span class="glyphicon glyphicon-time"></span>
+            </div>
+            <h3 class="timeline-item-heading">BE in Computer Engineering</h3>
+            <div class="description">
+              <p>Government College of Engineering and Research</p>
+              <h5>CGPA: 9.13</h5>
+            </div>
+          </li>
+          <!-- Diploma -->
+          <li class="event">
+            <div class="left-arrow"></div>
+            <div class="time">
+              2019 - 2022 <span class="glyphicon glyphicon-time"></span>
+            </div>
+            <h3 class="timeline-item-heading">
+              Diploma in Computer Engineering
+            </h3>
+            <div class="description">
+              <p>Cusrow Wadia Institute of Technology</p>
+              <h5>Percentage: 97.53%</h5>
+            </div>
+          </li>
+        </ul>
       </div>
+      <!-- Edication TImelineSection  ends-->
+      <!-- Experience TImeline section starts -->
+
+      <div class="education-timeline-container">
+        <h3 class="timeline-main-heading">Experience</h3>
+        <ul class="timeline">
+          <!-- Sunshine Powertronics -->
+          <li class="event">
+            <div class="left-arrow"></div>
+            <div class="time">
+              Jun - Present
+              <span class="glyphicon glyphicon-time"><br />2024</span>
+            </div>
+            <h3 class="timeline-item-heading">Embedded Firmware Developer</h3>
+            <div class="description">
+              <p>OyeBusy Technologies Pvt.Ltd</p>
+              <h5>
+                Built a QT5 desktop app to automate testing in the UV light
+                manufacturing industry, then worked on the BSNL BharatNet Smart
+                Gateway, customizing Yocto Linux and developing C applications
+                for RS485 data collection with a Node.js AWS backend.Currently
+                focusing on embedded systems, working with the Renesas RA
+                series, MindMotion MM320001A1TC, and developing IoT
+                applications.
+              </h5>
+            </div>
+          </li>
+          <!-- Oyebusy -->
+          <li class="event">
+            <div class="left-arrow"></div>
+            <div class="time">
+              Dec - May
+              <span class="glyphicon glyphicon-time"><br />2024</span>
+            </div>
+            <h3 class="timeline-item-heading">Flutter Developer Intern</h3>
+            <div class="description">
+              <p>OyeBusy Technologies Pvt.Ltd</p>
+              <h5>
+                Developed two Flutter apps simultaneously, enhancing the
+                OyeBusy-Partner app by Implementing State Management <br />
+                Hands on experience with tech stack like Flutter, Google
+                Firebase, Dart, GetX, API, Figma, etc.
+              </h5>
+            </div>
+          </li>
+
+          <!-- Rudraksha Foundation -->
+
+          <li class="event">
+            <div class="left-arrow"></div>
+            <div class="time">
+              Jul - Aug
+              <span class="glyphicon glyphicon-time"><br />2022</span>
+            </div>
+            <h3 class="timeline-item-heading">Android App Developer Intern</h3>
+            <div class="description">
+              <p>Rudraksha Foundation</p>
+              <h5>
+                Worked on the android app, Implemented Responsive designs using
+                XML. <br />
+                Hands on experience with tech stack like Android, XML, Java,
+                Google Firebase, Figma, etc.
+              </h5>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Experience TImeline section ends -->
     </section>
     <!-- TimeLine  ends   -->
 
@@ -646,10 +618,9 @@
               <a
                 href="https://maps.app.goo.gl/rkRrCzUWkohctrA17"
                 target="_blank"
-                >Pune, Maharashtra - 412307</a
+                >Pune, Maharashtra</a
               >
             </li>
-            <li><a href="tel:+918554931251">+91 8554931251</a></li>
             <li>
               <a href="mailto:jay2272001@gmail.com">jay2272001@gmail.com</a>
             </li>
@@ -661,9 +632,6 @@
         <div class="footer-col">
           <h4>follow on</h4>
           <div class="social-links">
-            <a href="https://twitter.com/shutterscripter" target="_blank"
-              ><i class="fa-brands fa-x-twitter"></i
-            ></a>
             <a
               href="https://www.linkedin.com/in/jayeshshinde2001/"
               target="_blank"

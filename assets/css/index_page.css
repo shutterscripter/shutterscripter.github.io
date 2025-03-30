@@ -1,3 +1,11 @@
+@font-face {
+  font-family: agnostic;
+  src: url("../fonts/Agnostic-gxDeq.ttf");
+}
+@font-face {
+  font-family: bantayog;
+  src: url("../fonts/Bantayog-Regular.otf");
+}
 *,
 *::before,
 *::after {
@@ -44,59 +52,61 @@ nav {
 }
 
 .intro {
-  margin: 5% 5% 0% 5%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 25%;
 }
 .info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
 }
 
 .info h1 {
   font-size: 70px;
-  line-height: 0.1;
-  font-family: "Abril Fatface", serif;
   font-weight: 900;
   color: #fff;
   transition: 0.3s all ease;
   margin-bottom: 0 !important;
+  font-family: "bantayog";
+  line-height: 0.9;
 }
 .info p {
-  width: 60%;
   font-weight: 400;
   margin-top: 20px;
   color: #e5e5e5;
   font-family: "Poppins", Arial, sans-serif;
   font-size: 15px;
-  line-height: 1.8;
   font-weight: 400;
   text-transform: capitalize;
 }
 
-.info .android {
+.info .self-title {
   text-transform: uppercase;
   font-size: 13px;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
+
   color: rgba(255, 255, 255, 0.2);
   font-weight: 600;
-  margin-left: 0.5rem;
   margin-top: 0 !important;
   background-color: inherit;
 }
+
 .divider-desc {
-  max-width: 60%;
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
+  display: block;
+  max-width: 50%;
+  align-items: center;
+  margin-bottom: 2em;
 }
-.vertical-divider {
+/* .vertical-divider {
   border-left: 3px solid #f3c623;
   height: auto;
   margin-right: 1rem;
-}
+} */
 #btn-contact-me {
   margin-top: 20px;
   padding: 6px 10px;
@@ -116,6 +126,30 @@ nav {
   cursor: pointer;
   border: 1px solid transparent;
   box-shadow: 0 1px 3px #f3c62381, 0 1px 2px #f3c623;
+}
+
+.mouse-more {
+  position: relative;
+  animation: scroll-indicator 1.5s infinite ease-in-out;
+  font-size: 24px; /* Adjust size as needed */
+  color: #ffffff; /* Ensure visibility */
+  margin-bottom: 20px;
+}
+
+/* Keyframes for the scroll animation */
+@keyframes scroll-indicator {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px); /* Move down */
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0); /* Move back to original position */
+    opacity: 1;
+  }
 }
 
 .media {
@@ -247,6 +281,9 @@ nav {
 .heading-projects {
   display: flex;
   flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
 }
 .heading-projects h1 {
   font-size: 42px;
@@ -256,9 +293,9 @@ nav {
 }
 
 .heading-projects a {
-  font-size: 20px;
+  font-size: 12px;
   font-weight: 600;
-  margin-top: 1rem;
+  text-decoration: none;
   color: #fff;
   letter-spacing: 0.2rem;
   text-transform: capitalize;
