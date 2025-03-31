@@ -374,7 +374,7 @@ nav {
 .project-links {
   display: flex;
   justify-content: center;
-  position: absolute;
+  align-items: center;
   bottom: 0px;
   margin-top: 1rem;
 }
