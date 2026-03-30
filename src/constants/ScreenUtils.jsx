@@ -1,0 +1,2 @@
+const SECTION_HEIGHT = 280;
+export { SECTION_HEIGHT };

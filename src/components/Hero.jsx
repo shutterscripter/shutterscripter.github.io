@@ -1,0 +1,16 @@
+import React from "react";
+import { SECTION_HEIGHT } from "../constants/ScreenUtils";
+import CenterImage from "./CenterImage";
+const Hero = () => {
+  return (
+    <div
+      style={{ height: `calc(${SECTION_HEIGHT}px + 100vh)` }}
+      className="relative w-full pb-16"
+    >
+      <CenterImage />
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-linear-to-b from-surface/0 to-surface" />
+    </div>
+  );
+};
+
+export default Hero;

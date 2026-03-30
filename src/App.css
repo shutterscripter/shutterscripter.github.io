@@ -1,0 +1,4 @@
+/* App.css */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
