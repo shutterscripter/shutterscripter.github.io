@@ -87,17 +87,18 @@ const BottomNav = () => {
       onClick: () => scrollToSection("home"),
     },
     {
-      name: "Skills",
-      id: "skills",
-      icon: <FiCode className="h-4 w-4" />,
-      onClick: () => scrollToSection("skills"),
-    },
-    {
       name: "Projects",
       id: "projects",
       icon: <FiBriefcase className="h-4 w-4" />,
       onClick: () => scrollToSection("projects"),
     },
+    {
+      name: "Skills",
+      id: "skills",
+      icon: <FiCode className="h-4 w-4" />,
+      onClick: () => scrollToSection("skills"),
+    },
+
     {
       name: "Articles",
       id: "articles",

@@ -65,6 +65,8 @@
   --color-accent: var(--accent);
   --color-accent-muted: var(--accent-muted);
   --color-accent-secondary: var(--accent-secondary);
+
+  --font-vorcas: "Vorcas", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {

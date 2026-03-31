@@ -30,7 +30,7 @@ const ArticleSection = () => {
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="mb-4 text-center text-4xl font-bold"
+        className="mb-4 text-center text-2xl font-bold"
       >
         Latest Articles
       </motion.h2>

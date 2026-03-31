@@ -10,7 +10,7 @@ const ExperienceSection = () => {
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="text-4xl font-bold mb-16 text-center"
+        className="mb-16 text-center text-2xl font-bold"
       >
         Experience & Education
       </motion.h2>
