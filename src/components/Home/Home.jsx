@@ -1,14 +1,14 @@
 import { ReactLenis } from "lenis/react";
 import { useMotionValue } from "framer-motion";
-import BottomNav from "./BottomNav";
-import Hero from "./Hero";
-import ExperienceSection from "./ExperienceSection";
-import ProjectSection from "./ProjectSection";
-import SkillSection from "./SkillSection";
-import ArticleSection from "./ArticleSection";
-import ContactSection from "./Contactsection";
+import BottomNav from "../BottomNav/BottomNav";
+import Hero from "../Hero/Hero";
+import ExperienceSection from "../Experience/ExperienceSection";
+import ProjectSection from "../Work/ProjectSection";
+import SkillSection from "../Skills/SkillSection";
+import ArticleSection from "../Articles/ArticleSection";
+import ContactSection from "../Contact/ContactSection";
 
-export const SmoothScrollHero = () => {
+export const Home = () => {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -29,7 +29,7 @@ export const SmoothScrollHero = () => {
         <ReactLenis
           root
           options={{
-            lerp: 0.05,
+            lerp: 0.08,
           }}
         >
           <Hero />

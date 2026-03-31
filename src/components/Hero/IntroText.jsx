@@ -2,12 +2,12 @@ import React from "react";
 import { useScroll } from "framer-motion";
 import { useMotionValue } from "framer-motion";
 import { useTransform } from "framer-motion";
-import { SECTION_HEIGHT } from "../constants/ScreenUtils";
+import { SECTION_HEIGHT } from "../../constants/ScreenUtils";
 import { motion } from "framer-motion";
 import InteractiveGrid from "./InteractiveGrid";
 import AnimatedRoleBadge from "./AnimatedRoleBadge";
 
-const CenterImage = () => {
+const IntroText = () => {
   const { scrollY } = useScroll();
   const mouseX = useMotionValue(0.5);
   const mouseY = useMotionValue(0.5);
@@ -108,4 +108,4 @@ const CenterImage = () => {
   );
 };
 
-export default CenterImage;
+export default IntroText;

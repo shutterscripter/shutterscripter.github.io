@@ -2,7 +2,11 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const AnimatedRoleBadge = () => {
-  const roles = ["Full Stack Mobile Developer", "Flutter Developer"];
+  const roles = [
+    "Full Stack Mobile Developer",
+    "Flutter Developer",
+    "Backend Enginner",
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -15,7 +19,7 @@ const AnimatedRoleBadge = () => {
   }, [roles.length]);
 
   return (
-    <div className="relative h-12 md:h-14 flex items-center justify-center min-w-[200px] md:min-w-[450px]">
+    <div className="relative h-10 md:h-8 flex items-center justify-center min-w-[150px] md:min-w-[300px]">
       <AnimatePresence mode="wait">
         <motion.span
           key={currentIndex}

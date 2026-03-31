@@ -2,48 +2,12 @@ import React from "react";
 import { useLenis } from "lenis/react";
 import { motion } from "framer-motion";
 import {
-  SiGithub,
-  SiLinkedin,
-  SiX,
-  SiReact,
-  SiNodedotjs,
-  SiTailwindcss,
-  SiFigma,
-  SiFlutter,
-  SiAndroid,
-  SiKotlin,
-  SiDart,
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiTypescript,
-  SiNestjs,
-  SiDocker,
-  SiLinux,
-  SiMongodb,
-  SiMysql,
-  SiFirebase,
-  SiPython,
-  SiGit,
-} from "react-icons/si";
-import {
-  FiArrowRight,
   FiMail,
-  FiExternalLink,
-  FiDownload,
-  FiZap,
-  FiCloud,
-  FiChevronLeft,
-  FiChevronRight,
   FiCode,
   FiBriefcase,
   FiFileText,
   FiHome,
 } from "react-icons/fi";
-import { FaMagic, FaJava } from "react-icons/fa";
-import { FaGraduationCap } from "react-icons/fa6";
-import { MdOutlineWorkOutline } from "react-icons/md";
-import { SiBootstrap } from "react-icons/si";
 import { useRef, useState, useEffect, useCallback } from "react";
 
 const SECTION_IDS = ["skills", "projects", "articles", "contact"];
@@ -164,11 +128,7 @@ const BottomNav = () => {
               onClick={item.onClick}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className={`group relative flex items-center gap-2 rounded-full px-4 py-2.5 transition-all ${
-                isActive
-                  ? "border border-accent/30 bg-accent/20 text-accent-muted"
-                  : "text-fg-muted hover:bg-surface-hover/80 hover:text-accent-muted dark:hover:bg-surface-hover/50"
-              }`}
+              className={`group relative flex items-center gap-2 rounded-full px-4 py-2.5 transition-all`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05 }}

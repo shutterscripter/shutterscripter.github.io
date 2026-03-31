@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { SiLinkedin } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
-import SocialLink from "./SocialLink";
+import SocialLink from "../SocialLink";
 const ContactSection = () => {
   return (
     <footer id="contact" className="py-24 scroll-mt-24">
