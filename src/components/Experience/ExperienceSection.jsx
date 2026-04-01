@@ -32,14 +32,16 @@ const ExperienceSection = () => {
 
             <div className="space-y-12">
               <TimelineItem
-                role="Embedded Firmware Developer"
-                company="Sunshine Iotronics Pvt.Ltd"
-                date="Jun 2024"
+                role="Software Engineer"
+                company="Sunshine Iotronics LLP"
+                companyUrl="https://sunshineiot.in/"
+                location="On-site, Pune"
+                date="Oct 2024"
                 dateEnd="Present"
                 achievements={[
-                  "Built a QT5 desktop app to automate testing in the UV light manufacturing industry",
-                  "Worked on the BSNL BharatNet Smart Gateway, customizing Yocto Linux and developing C applications for RS485 data collection with a Node.js AWS backend",
-                  "Currently focusing on embedded systems, working with the Renesas RA series, MindMotion MM320001A1TC, and developing IoT applications",
+                  "Designed and built REST APIs using Node.js (Express) and MongoDB for Io-Net, a cloud-connected IoT platform deployed on Google Play Store for remote device monitoring and control.",
+                  "Implemented an atomic credit deduction system with MongoDB transactions.",
+                  "Solely developed the backend infrastructure for the BharatNet project (BSNL), building scalable APIs and managing Linux-based deployments and CI/CD pipelines.",
                 ]}
               />
               <TimelineItem

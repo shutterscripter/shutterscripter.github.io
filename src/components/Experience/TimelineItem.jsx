@@ -1,7 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FiExternalLink } from "react-icons/fi";
 
-const TimelineItem = ({ role, company, date, dateEnd, achievements }) => {
+const TimelineItem = ({
+  role,
+  company,
+  companyUrl,
+  location,
+  date,
+  dateEnd,
+  achievements,
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0, x: -30 }}
@@ -23,12 +32,37 @@ const TimelineItem = ({ role, company, date, dateEnd, achievements }) => {
           {role}
         </h3>
 
-        {/* Company */}
-        <p className="mb-3 text-sm text-fg-muted">{company}</p>
+        {/* Company + optional location */}
+        <div className="mb-3 space-y-1">
+          <p className="text-sm text-fg-muted">
+            {companyUrl ? (
+              <a
+                href={companyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 font-medium text-fg transition-colors hover:text-accent sm:gap-2"
+              >
+                {company}
+                <FiExternalLink
+                  className="h-3.5 w-3.5 shrink-0 text-fg-subtle"
+                  aria-hidden
+                />
+                <span className="sr-only">(opens in new tab)</span>
+              </a>
+            ) : (
+              company
+            )}
+          </p>
+          {location ? (
+            <p className="text-xs text-fg-subtle">{location}</p>
+          ) : null}
+        </div>
 
         {/* Dates - Highlighted */}
-        <div className="flex items-center gap-2 mb-4">
-          <span className="text-sm font-medium text-accent-muted">{date}</span>
+        <div className="mb-4 flex flex-wrap items-center gap-x-2 gap-y-1">
+          <span className="text-sm font-medium tabular-nums text-accent-muted">
+            {date}
+          </span>
           <span className="text-fg-subtle">—</span>
           <span className="text-sm font-medium text-accent-muted">
             {dateEnd}

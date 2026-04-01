@@ -1,160 +1,140 @@
-import React from "react";
-import { useRef } from "react";
-import { useState } from "react";
-import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { FiChevronLeft } from "react-icons/fi";
-import { FiChevronRight } from "react-icons/fi";
-import SkillCard from "./SkillCard";
 import { FaJava } from "react-icons/fa";
-import { SiPython } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
-import { SiJavascript } from "react-icons/si";
-import { SiAndroid } from "react-icons/si";
-import { SiFlutter } from "react-icons/si";
-import { SiKotlin } from "react-icons/si";
-import { SiDart } from "react-icons/si";
-import { SiHtml5 } from "react-icons/si";
-import { SiCss3 } from "react-icons/si";
-import { SiBootstrap } from "react-icons/si";
-import { SiDocker } from "react-icons/si";
-import { SiLinux } from "react-icons/si";
-import { SiMongodb } from "react-icons/si";
-import { SiMysql } from "react-icons/si";
-import { SiFirebase } from "react-icons/si";
-import { SiNodedotjs } from "react-icons/si";
-import { SiNestjs } from "react-icons/si";
-import { SiGit } from "react-icons/si";
-import { FiCloud } from "react-icons/fi";
-const SkillSection = () => {
-  const allSkills = [
-    { icon: <FaJava />, name: "Java" },
-    { icon: <SiPython />, name: "Python" },
-    { icon: <SiTypescript />, name: "TypeScript" },
-    { icon: <SiJavascript />, name: "JavaScript" },
-    { icon: <SiAndroid />, name: "Android" },
-    { icon: <SiFlutter />, name: "Flutter" },
-    { icon: <SiKotlin />, name: "Kotlin" },
-    { icon: <SiDart />, name: "Dart" },
-    { icon: <SiHtml5 />, name: "HTML" },
-    { icon: <SiCss3 />, name: "CSS" },
-    { icon: <SiBootstrap />, name: "Bootstrap" },
-    { icon: <FiCloud />, name: "AWS" },
-    { icon: <SiDocker />, name: "Docker" },
-    { icon: <SiLinux />, name: "Linux" },
-    { icon: <SiMongodb />, name: "MongoDB" },
-    { icon: <SiMysql />, name: "MySQL" },
-    { icon: <SiFirebase />, name: "Firebase" },
-    { icon: <SiNodedotjs />, name: "NodeJS" },
-    { icon: <SiNestjs />, name: "NestJS" },
-    { icon: <SiGit />, name: "Git" },
-  ];
+import {
+  SiAndroid,
+  SiBootstrap,
+  SiCss3,
+  SiDart,
+  SiDocker,
+  SiExpress,
+  SiFirebase,
+  SiFlutter,
+  SiGithubactions,
+  SiGit,
+  SiGo,
+  SiHtml5,
+  SiJavascript,
+  SiKotlin,
+  SiLinux,
+  SiMongodb,
+  SiMysql,
+  SiNestjs,
+  SiNodedotjs,
+  SiPostgresql,
+  SiPython,
+  SiRedis,
+  SiSocketdotio,
+  SiTypescript,
+  SiReact,
+  SiXml,
+} from "react-icons/si";
+import {
+  FiCloud,
+  FiCpu,
+  FiDatabase,
+  FiGlobe,
+  FiLayers,
+  FiRefreshCw,
+  FiServer,
+  FiTerminal,
+  FiWifi,
+  FiZap,
+} from "react-icons/fi";
+import { BiBrain } from "react-icons/bi";
+import SkillCard from "./SkillCard";
 
-  // Duplicate skills for infinite scroll
-  const duplicatedSkills = [...allSkills, ...allSkills, ...allSkills];
-  const carouselRef = useRef(null);
-  const [isPaused, setIsPaused] = useState(false);
+const SKILL_GROUPS = [
+  {
+    label: "Languages & runtimes",
+    skills: [
+      { icon: <FaJava />, name: "Java" },
+      { icon: <SiPython />, name: "Python" },
+      { icon: <SiJavascript />, name: "JavaScript" },
+      { icon: <SiTypescript />, name: "TypeScript" },
+      { icon: <SiGo />, name: "Go" },
+      { icon: <SiDart />, name: "Dart" },
+      { icon: <SiKotlin />, name: "Kotlin" },
+      { icon: <FiDatabase />, name: "SQL" },
+    ],
+  },
+  {
+    label: "Mobile & UI",
+    skills: [
+      { icon: <SiFlutter />, name: "Flutter" },
+      { icon: <FiLayers />, name: "GetX" },
+      { icon: <SiAndroid />, name: "Android" },
+      { icon: <SiReact />, name: "React Native" },
+    ],
+  },
+  {
+    label: "Backend & APIs",
+    skills: [
+      { icon: <SiNodedotjs />, name: "Node.js" },
+      { icon: <SiExpress />, name: "Express.js" },
+      { icon: <SiNestjs />, name: "NestJS" },
+      { icon: <FiZap />, name: "Fiber" },
+      { icon: <FiServer />, name: "REST APIs" },
+      { icon: <SiSocketdotio />, name: "WebSockets" },
+    ],
+  },
+  {
+    label: "Data & cloud",
+    skills: [
+      { icon: <SiMongodb />, name: "MongoDB" },
+      { icon: <SiMysql />, name: "MySQL" },
+      { icon: <SiPostgresql />, name: "PostgreSQL" },
+      { icon: <SiRedis />, name: "Redis" },
+      { icon: <SiFirebase />, name: "Firebase" },
+      { icon: <FiCloud />, name: "AWS" },
+    ],
+  },
+  {
+    label: "DevOps & tooling",
+    skills: [
+      { icon: <SiDocker />, name: "Docker" },
+      { icon: <SiLinux />, name: "Linux" },
+      { icon: <SiGit />, name: "Git" },
+      { icon: <SiGithubactions />, name: "CI/CD" },
+    ],
+  },
+];
 
-  useEffect(() => {
-    const carousel = carouselRef.current;
-    if (!carousel || isPaused) return;
-
-    let animationId;
-    let scrollPosition = 0;
-    const scrollSpeed = 0.5;
-
-    const animate = () => {
-      if (carousel) {
-        scrollPosition += scrollSpeed;
-        const maxScroll = carousel.scrollWidth / 3; // Since we duplicated 3 times
-
-        if (scrollPosition >= maxScroll) {
-          scrollPosition = 0;
-        }
-
-        carousel.scrollLeft = scrollPosition;
-      }
-      animationId = requestAnimationFrame(animate);
-    };
-
-    animate();
-
-    return () => {
-      if (animationId) {
-        cancelAnimationFrame(animationId);
-      }
-    };
-  }, [isPaused]);
-
-  const scroll = (direction) => {
-    if (carouselRef.current) {
-      const scrollAmount = 300;
-      carouselRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
-    }
-  };
-
+export default function SkillSection() {
   return (
-    <section
-      id="skills"
-      className="scroll-mt-24 overflow-hidden border-b border-border py-24"
-    >
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        className="mb-12 text-center text-2xl font-bold"
-      >
-        Code : Skills
-      </motion.h2>
-
-      <div
-        className="relative"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-      >
-        {/* Left Arrow */}
-        <button
-          onClick={() => scroll("left")}
-          className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full border border-border-strong bg-surface/90 p-3 backdrop-blur-sm transition-all hover:scale-110 hover:bg-surface-elevated dark:bg-surface-muted/90 dark:hover:bg-surface-hover"
-          aria-label="Previous skills"
+    <section id="skills" className="scroll-mt-24 border-b border-border py-24">
+      <div className="mb-10 sm:mb-12">
+        <motion.h2
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          className="text-2xl font-bold tracking-tight"
         >
-          <FiChevronLeft className="text-2xl text-fg" />
-        </button>
+          Code : Skills
+        </motion.h2>
+      </div>
 
-        {/* Right Arrow */}
-        <button
-          onClick={() => scroll("right")}
-          className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full border border-border-strong bg-surface/90 p-3 backdrop-blur-sm transition-all hover:scale-110 hover:bg-surface-elevated dark:bg-surface-muted/90 dark:hover:bg-surface-hover"
-          aria-label="Next skills"
-        >
-          <FiChevronRight className="text-2xl text-fg" />
-        </button>
-
-        {/* Carousel Container */}
-        <div
-          ref={carouselRef}
-          className="flex gap-6 overflow-x-scroll hide-scrollbar"
-          style={{
-            scrollbarWidth: "none",
-            msOverflowStyle: "none",
-          }}
-        >
-          {duplicatedSkills.map((skill, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              className="shrink-0"
-            >
-              <SkillCard icon={skill.icon} name={skill.name} />
-            </motion.div>
-          ))}
-        </div>
+      <div className="flex flex-col gap-12 sm:gap-14">
+        {SKILL_GROUPS.map((group, gi) => (
+          <div key={group.label}>
+            <h3 className="mb-4 border-b border-border pb-2 text-xs font-semibold uppercase tracking-[0.12em] text-fg-muted">
+              {group.label}
+            </h3>
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+              {group.skills.map((skill, si) => (
+                <motion.div
+                  key={`${group.label}-${skill.name}`}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-24px" }}
+                  transition={{ delay: Math.min(si * 0.02, 0.2) + gi * 0.03 }}
+                >
+                  <SkillCard icon={skill.icon} name={skill.name} />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
-};
-
-export default SkillSection;
+}

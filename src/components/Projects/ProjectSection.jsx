@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
 import ProjectListItem from "./ProjectListItem";
-import { PROJECTS } from "../../data/projects";
+import { HOME_PROJECTS } from "../../data/projects";
 
 const TABS = [
   { id: "mobile", label: "Mobile" },
@@ -12,13 +12,10 @@ const TABS = [
 
 const ProjectSection = () => {
   const [activeTab, setActiveTab] = useState("mobile");
-  const list = PROJECTS[activeTab];
+  const list = HOME_PROJECTS[activeTab];
 
   return (
-    <section
-      id="projects"
-      className="scroll-mt-24 border-b border-border py-24"
-    >
+    <section id="projects" className="scroll-mt-24 py-24">
       <div className="mb-8 flex flex-col gap-4 sm:mb-12 sm:flex-row sm:items-center sm:justify-between">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -94,7 +91,7 @@ const ProjectSection = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -8 }}
           transition={{ duration: 0.2 }}
-          className="divide-y divide-border border-t border-border"
+          className="divide-y divide-border border-border"
         >
           {list.map((project) => (
             <ProjectListItem key={project.title} {...project} />

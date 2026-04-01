@@ -1,4 +1,4 @@
-/** Shared project data for the home section and /projects page */
+/** `PROJECTS` = full list on `/projects`. `HOME_PROJECTS` = home section (featured mobile + same backend). */
 export const GITHUB_PROFILE_URL =
   "https://github.com/shutterscripter?tab=repositories";
 
@@ -34,31 +34,67 @@ export const PROJECTS = {
   ],
   backend: [
     {
-      title: "IoT Gateway Data Pipeline",
+      title: "DelKey Backend",
       description:
-        "C services on embedded Linux collecting RS485 sensor data, with a Node.js layer and AWS backend for ingestion, storage, and remote monitoring.",
-      tags: ["Node.js", "AWS", "C"],
-      link: "https://github.com/shutterscripter?tab=repositories",
-      image:
-        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2670&auto=format&fit=crop",
+        "Developed scalable backend for a Wi-Fi-based smart lock system, enabling secure, cloud-integrated access control. Implemented proximity-based device authentication, real-time communication with IoT hardware, and administrator-authorized unlocking of secured enclosures. Designed backend services for audit logging, access monitoring, and device management to support industrial and enterprise use cases.",
+      tags: ["Go", "Fiber", "Redis", "PostgreSQL", "WebSocket", "Docker"],
+      link: GITHUB_PROFILE_URL,
     },
     {
-      title: "Manufacturing Test Automation (Qt)",
+      title: "ERP System [Playstore]",
       description:
-        "Desktop tooling built with Qt5 to automate UV manufacturing test workflows, serial device integration, and operator-friendly validation flows.",
-      tags: ["Qt5", "C++", "Linux"],
-      link: "https://github.com/shutterscripter?tab=repositories",
-      image:
-        "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=2670&auto=format&fit=crop",
+        "Implemented backend services for an ERP system to manage employee data, inventory/stock, and operational workflows. Built APIs for real-time stock tracking, employee management, and reporting, ensuring efficient business operations.",
+      tags: ["Node.js", "SQL", "CI/CD", "Flutter"],
+      link: GITHUB_PROFILE_URL,
     },
     {
-      title: "NestJS Service Template",
+      title: "Deadsniper [GitHub]",
       description:
-        "Structured REST API template with validation, modular architecture, and deployment notes—useful as a base for product backends and integrations.",
-      tags: ["NestJS", "TypeScript", "REST"],
-      link: "https://github.com/shutterscripter?tab=repositories",
-      image:
-        "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2670&auto=format&fit=crop",
+        "Built an open-source CLI tool in Go that crawls websites recursively and detects broken links (4xx/5xx, soft 404s). Implemented concurrent HTTP checking with configurable threads, depth-limited same-domain crawling, and multiple output formats (text/JSON). Supports cross-platform builds (macOS, Linux, Windows) via automated build scripts. Published with an install script for quick setup.",
+      tags: ["Go", "Concurrency", "Web Scraping", "CLI"],
+      link: GITHUB_PROFILE_URL,
+    },
+    {
+      title: "URL Shortener [GitHub]",
+      description:
+        "Built a high-performance URL shortening service with custom short codes, expiration, and IP-based rate limiting. Implemented URL validation, redirect analytics, and Dockerized deployment for scalable API performance.",
+      tags: ["Go", "Fiber", "Redis", "Docker", "REST APIs"],
+      link: GITHUB_PROFILE_URL,
     },
   ],
+};
+
+/** Curated list for the home page projects section. Mobile tab shows featured work; Backend matches /projects. */
+export const HOME_PROJECTS = {
+  mobile: [
+    {
+      title: "Io-Net",
+      description:
+        "An IoT platform that unifies multiple smart devices into a single controllable network with real-time monitoring and remote device management. Built secure device onboarding (PIN pairing), scheduling automation, and multi-user device sharing for collaborative monitoring and control. Implemented a reliable backend using ExpressJS and MongoDB, supporting cloud-connected IoT workflows with high scalability. Includes an automated credit deduction system for continuous service usage, ensuring atomic and fail-safe daily balance updates.",
+      tags: ["Express.js", "MongoDB", "IoT"],
+      link: GITHUB_PROFILE_URL,
+    },
+    {
+      title: "USB-Link",
+      description:
+        "Flutter-based hardware interface tool to query and monitor connected embedded devices using USB CDC communication. Fetches live device parameters, firmware settings, alarms, and system health data, presenting them in an intuitive real-time monitoring dashboard. Supports structured device configuration and diagnostics by reading system alerts and operational states directly from hardware. Includes Excel log export and session report generation for telemetry storage, debugging, and data-driven analysis.",
+      tags: ["Flutter", "USB CDC", "Embedded"],
+      link: GITHUB_PROFILE_URL,
+    },
+    {
+      title: "DialTrack",
+      description:
+        "A practical telecom analytics and automation tool built with Flutter, GetX, and Firebase. Automatically fetches call logs and provides insights like total calls, repeated callers, max duration, and call behavior trends. Includes daily and monthly breakdowns with interactive charts and supports CSV-based bulk call automation for structured dialing workflows.",
+      tags: ["Flutter", "GetX", "Firebase"],
+      link: GITHUB_PROFILE_URL,
+    },
+    {
+      title: "News Summarization App",
+      description:
+        "Built a Flutter app with GetX state management that fetches news from the Open News API and custom API endpoints, integrating a pre-trained NLP model for automatic news summarization.",
+      tags: ["Flutter", "GetX", "NLP"],
+      link: "https://github.com/shutterscripter/FlutterPress",
+    },
+  ],
+  backend: PROJECTS.backend,
 };

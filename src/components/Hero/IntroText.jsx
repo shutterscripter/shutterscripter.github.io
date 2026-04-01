@@ -54,9 +54,9 @@ const IntroText = () => {
         >
           <div>
             <p className="text-sm font-light leading-relaxed text-fg-muted md:text-base lg:text-lg">
-              Crafting embedded solutions and mobile applications that bridge
-              hardware and software. Expert in Flutter, Android, and embedded
-              systems with a passion for clean code and scalable architecture.
+              Building scalable mobile apps with Flutter, backed by solid
+              backend systems. Focused on clean architecture, performance, and
+              real-world impact.
             </p>
           </div>
         </motion.div>
