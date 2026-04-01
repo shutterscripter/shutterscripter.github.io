@@ -49,6 +49,9 @@ jobs:
         run: |
           set -e
           cp -R docs /tmp/site-build
+          # Discard build output so `git checkout main` is not blocked (tracked + untracked in docs/)
+          git reset --hard HEAD
+          if [ -d docs ]; then git clean -fd docs; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin main
