@@ -1,0 +1,65 @@
+# Build the site and commit the output to the `docs/` folder on `main`.
+# GitHub Pages (Source: Deploy from branch → main → /docs) will serve the new files.
+#
+# Runs only when you push a version tag (e.g. v1.0.0). Example:
+#   git tag v1.0.0 && git push origin v1.0.0
+#
+# The deploy commit uses [skip ci] so it does not re-run this workflow.
+#
+# Repo Settings → Pages: Branch = main, folder = /docs
+
+name: Build and deploy to main (docs)
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-docs-main
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install and build
+        run: |
+          npm ci
+          npm run build
+
+      - name: SPA fallback (GitHub Pages)
+        run: cp docs/index.html docs/404.html
+
+      - name: Commit docs to main
+        run: |
+          set -e
+          cp -R docs /tmp/site-build
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git checkout main
+          git pull origin main --rebase
+          rm -rf docs
+          cp -R /tmp/site-build docs
+          git add docs
+          if git diff --staged --quiet; then
+            echo "No changes in docs — nothing to deploy."
+            exit 0
+          fi
+          git commit -m "chore: deploy site [skip ci]"
+          git push origin main
