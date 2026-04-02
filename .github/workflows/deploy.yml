@@ -59,7 +59,9 @@ jobs:
 
           # Remove previous static site at repo root (old GitHub Pages deploy)
           rm -rf assets
-          rm -f index.html 404.html vite.svg
+          rm -f index.html 404.html vite.svg favicon.ico favicon.svg favicon-96x96.png \
+            apple-touch-icon.png site.webmanifest web-app-manifest-192x192.png \
+            web-app-manifest-512x512.png
 
           # Remove old /docs site if present (Pages was serving root, not /docs)
           if [ -d docs ]; then
@@ -71,8 +73,10 @@ jobs:
           echo "=== root after deploy copy ==="
           ls -la
 
-          git add -f index.html 404.html assets
-          if [ -f vite.svg ]; then git add -f vite.svg; fi
+          # Stage everything Vite put in dist (HTML, assets/, favicons, manifest, etc.)
+          (cd /tmp/site-build && find . -type f) | sed 's|^\./||' | while IFS= read -r f; do
+            git add -f "$f"
+          done
 
           echo "=== git status ==="
           git status
