@@ -5,9 +5,9 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  // GitHub Pages: serve from main branch /docs folder
+  // Production output goes to dist/ (gitignored). CI copies dist → repo root for GitHub Pages.
   build: {
-    outDir: 'docs',
+    outDir: 'dist',
     emptyOutDir: true,
   },
 })

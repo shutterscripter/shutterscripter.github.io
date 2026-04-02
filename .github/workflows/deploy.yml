@@ -1,17 +1,13 @@
-# Build the site and commit the output to the `docs/` folder on `main`.
-# GitHub Pages (Source: Deploy from branch → main → /docs) will serve the new files.
+# Build with Vite → dist/, then copy those files to the REPO ROOT on main.
+# GitHub Pages for username.github.io usually serves / (root), not /docs — so the live site
+# must be index.html + assets/ at the top level of the branch.
 #
-# Runs only when you push a version tag (e.g. v1.0.0). Example:
-#   git tag v1.0.0 && git push origin v1.0.0
+# Runs on tag push: v1.0.0, v2.3.1, …
+#   git tag v1.0.1 && git push origin v1.0.1
 #
-# The deploy commit uses [skip ci] so it does not re-run this workflow.
-#
-# Repo Settings → Pages: Branch = main, folder = /docs
-#
-# If commits never appear on main: Settings → Actions → General → Workflow permissions
-# → "Read and write permissions" (and allow GitHub Actions to bypass branch protection if main is protected).
+# Settings → Actions → Workflow permissions: Read and write.
 
-name: Build and deploy to main (docs)
+name: Build and deploy to main (site root)
 
 on:
   push:
@@ -22,7 +18,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: deploy-docs-main
+  group: deploy-pages-root
   cancel-in-progress: true
 
 jobs:
@@ -47,36 +43,47 @@ jobs:
           npm run build
 
       - name: SPA fallback (GitHub Pages)
-        run: cp docs/index.html docs/404.html
+        run: cp dist/index.html dist/404.html
 
-      - name: Commit docs to main
+      - name: Copy dist to repo root on main
         run: |
           set -e
-          cp -R docs /tmp/site-build
-          # Discard build output so `git checkout main` is not blocked (tracked + untracked in docs/)
+          cp -R dist /tmp/site-build
           git reset --hard HEAD
-          if [ -d docs ]; then git clean -fd docs; fi
+          if [ -d dist ]; then git clean -fd dist; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin main
           git checkout main
           git pull origin main --rebase
-          rm -rf docs
-          cp -R /tmp/site-build docs
-          echo "=== docs after copy ==="
-          ls -la docs/ | head -20
-          # -f: include files even if docs/ is listed in .gitignore on main
-          git add -f docs
-          echo "=== git status (after add) ==="
+
+          # Remove previous static site at repo root (old GitHub Pages deploy)
+          rm -rf assets
+          rm -f index.html 404.html vite.svg
+
+          # Remove old /docs site if present (Pages was serving root, not /docs)
+          if [ -d docs ]; then
+            git rm -rf docs 2>/dev/null || rm -rf docs
+          fi
+
+          cp -r /tmp/site-build/. .
+
+          echo "=== root after deploy copy ==="
+          ls -la
+
+          git add -f index.html 404.html assets
+          if [ -f vite.svg ]; then git add -f vite.svg; fi
+
+          echo "=== git status ==="
           git status
-          echo "=== staged diff stat ==="
+          echo "=== staged diff ==="
           git diff --cached --stat || true
+
           if git diff --staged --quiet; then
-            echo "::warning::No staged changes — build output may match main's docs already, or docs/ may be excluded from git. Check .gitignore on main and the log above."
+            echo "::warning::No staged changes (build may match root already)."
             exit 0
           fi
+
           git commit -m "chore: deploy site [skip ci]"
-          echo "=== pushing to origin main ==="
           git push origin HEAD:main
-          echo "=== done; latest on main ==="
           git log -1 --oneline
