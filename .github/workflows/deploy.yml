@@ -7,6 +7,9 @@
 # The deploy commit uses [skip ci] so it does not re-run this workflow.
 #
 # Repo Settings → Pages: Branch = main, folder = /docs
+#
+# If commits never appear on main: Settings → Actions → General → Workflow permissions
+# → "Read and write permissions" (and allow GitHub Actions to bypass branch protection if main is protected).
 
 name: Build and deploy to main (docs)
 
@@ -30,6 +33,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -59,10 +63,20 @@ jobs:
           git pull origin main --rebase
           rm -rf docs
           cp -R /tmp/site-build docs
-          git add docs
+          echo "=== docs after copy ==="
+          ls -la docs/ | head -20
+          # -f: include files even if docs/ is listed in .gitignore on main
+          git add -f docs
+          echo "=== git status (after add) ==="
+          git status
+          echo "=== staged diff stat ==="
+          git diff --cached --stat || true
           if git diff --staged --quiet; then
-            echo "No changes in docs — nothing to deploy."
+            echo "::warning::No staged changes — build output may match main's docs already, or docs/ may be excluded from git. Check .gitignore on main and the log above."
             exit 0
           fi
           git commit -m "chore: deploy site [skip ci]"
-          git push origin main
+          echo "=== pushing to origin main ==="
+          git push origin HEAD:main
+          echo "=== done; latest on main ==="
+          git log -1 --oneline
