@@ -3,9 +3,10 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const AnimatedRoleBadge = () => {
   const roles = [
-    "Full Stack Mobile Developer",
+    "Software Developer",
     "Flutter Developer",
-    "Backend Enginner",
+    "Backend Engineer",
+    "Devops Enthusiast",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,7 +28,7 @@ const AnimatedRoleBadge = () => {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: -20, scale: 0.8 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="absolute inline-block rounded-full border border-accent/30 bg-accent/10 px-3 py-1.5 text-xs uppercase tracking-wider text-accent-muted backdrop-blur-sm"
+          className="absolute inline-block rounded-full border border-border-strong bg-surface-elevated/80 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.18em] text-fg-muted backdrop-blur-sm"
           whileHover={{ scale: 1.05 }}
         >
           {roles[currentIndex]}

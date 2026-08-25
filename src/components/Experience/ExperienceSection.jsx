@@ -32,36 +32,41 @@ const ExperienceSection = () => {
 
             <div className="space-y-12">
               <TimelineItem
+                role="Flutter Developer"
+                company="MultiFit Wellness Pvt. Ltd."
+                companyUrl="https://multifit.in/"
+                location="On-site, Pune"
+                date="Jun 2026"
+                dateEnd="Present"
+                achievements={[
+                  "Developing a corporate wellness application in Flutter to help organizations deliver accessible, engaging wellness experiences to employees.",
+                  "Building and refining production-ready mobile features with a focus on reliable performance and a smooth user experience.",
+                ]}
+              />
+              <TimelineItem
                 role="Software Engineer"
                 company="Sunshine Iotronics LLP"
                 companyUrl="https://sunshineiot.in/"
                 location="On-site, Pune"
-                date="Oct 2024"
-                dateEnd="Present"
+                date="Nov 2024"
+                dateEnd="Jun 2026"
                 achievements={[
-                  "Designed and built REST APIs using Node.js (Express) and MongoDB for Io-Net, a cloud-connected IoT platform deployed on Google Play Store for remote device monitoring and control.",
-                  "Implemented an atomic credit deduction system with MongoDB transactions.",
-                  "Solely developed the backend infrastructure for the BharatNet project (BSNL), building scalable APIs and managing Linux-based deployments and CI/CD pipelines.",
+                  "Architected and shipped 3+ production Flutter applications, integrating REST APIs, Firebase, and USB CDC, BLE, Wi-Fi, and UART communication for real-time IoT monitoring.",
+                  "Built an ERP platform with Node.js and a RAG assistant using Ollama, ChromaDB, and SQL for contextual document retrieval.",
+                  "Engineered a Go, Redis, and PostgreSQL WebSocket microservice architecture for reliable real-time events and zero-downtime schema evolution.",
+                  "Developed firmware for telecom-grade embedded systems with sensor integration, real-time control, and industry communication protocols.",
                 ]}
               />
               <TimelineItem
                 role="Flutter Developer Intern"
                 company="OyeBusy Technologies Pvt.Ltd"
+                location="Remote, Gurugram"
                 date="Dec 2023"
                 dateEnd="May 2024"
                 achievements={[
-                  "Developed two Flutter apps simultaneously, enhancing the OyeBusy-Partner app by Implementing State Management",
-                  "Hands on experience with tech stack like Flutter, Google Firebase, Dart, GetX, API, Figma, etc.",
-                ]}
-              />
-              <TimelineItem
-                role="Android App Developer Intern"
-                company="Rudraksha Foundation"
-                date="Jul 2022"
-                dateEnd="Aug 2022"
-                achievements={[
-                  "Worked on the android app, Implemented Responsive designs using XML",
-                  "Hands on experience with tech stack like Android, XML, Java, Google Firebase, Figma, etc.",
+                  "Shipped customer-facing features for a production Flutter app, contributing to a Google Play rating increase from 3.5 to 4.1.",
+                  "Optimized REST API integrations to improve performance, data consistency, and client-server communication.",
+                  "Supported Agile releases, production fixes, and Play Store deployments while maintaining application stability.",
                 ]}
               />
             </div>
@@ -84,18 +89,18 @@ const ExperienceSection = () => {
 
             <div className="space-y-12">
               <TimelineItem
-                role="BE in Computer Engineering"
-                company="Government College of Engineering and Research"
+                role="BE in Computer Science"
+                company="Government College of Engineering and Research, Avasari"
                 date="2022"
                 dateEnd="2025"
-                achievements={["CGPA: 9.13"]}
+                achievements={["CGPA: 8.62"]}
               />
               <TimelineItem
                 role="Diploma in Computer Engineering"
                 company="Cusrow Wadia Institute of Technology"
                 date="2019"
                 dateEnd="2022"
-                achievements={["Percentage: 97.53%"]}
+                achievements={["Percentage: 92.94%"]}
               />
             </div>
           </div>

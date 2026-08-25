@@ -21,10 +21,10 @@
   --border: #e4e4e7;
   --border-strong: #d4d4d8;
 
-  /* Brand (primary = emerald family, secondary = blue for gradients) */
-  --accent: #10b981;
-  --accent-muted: #34d399;
-  --accent-secondary: #3b82f6;
+  /* Monochrome accent system */
+  --accent: #18181b;
+  --accent-muted: #3f3f46;
+  --accent-secondary: #71717a;
 
   /* Hero / ambient (derived from brand) */
   --cursor-glow: color-mix(in srgb, var(--accent) 12%, transparent);
@@ -43,6 +43,10 @@
 
   --border: #27272a;
   --border-strong: #3f3f46;
+
+  --accent: #fafafa;
+  --accent-muted: #d4d4d8;
+  --accent-secondary: #71717a;
 
   --cursor-glow: color-mix(in srgb, var(--accent) 15%, transparent);
   --grid-line: rgba(128, 128, 128, 0.07);

@@ -6,6 +6,8 @@ import { SECTION_HEIGHT } from "../../constants/ScreenUtils";
 import { motion } from "framer-motion";
 import InteractiveGrid from "./InteractiveGrid";
 import AnimatedRoleBadge from "./AnimatedRoleBadge";
+import { FiArrowDownRight, FiDownload } from "react-icons/fi";
+import resumeUrl from "../../assets/Jayesh_Shinde_BE.pdf";
 
 const IntroText = () => {
   const { scrollY } = useScroll();
@@ -34,54 +36,63 @@ const IntroText = () => {
         <InteractiveGrid mouseX={mouseX} mouseY={mouseY} />
       </div>
 
-      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center p-4 pb-32">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center p-4 pb-32 text-center">
         <AnimatedRoleBadge />
         <motion.h1
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-8 px-4 text-5xl font-black leading-[0.9] tracking-tighter text-fg md:text-7xl lg:text-9xl"
+          className="mb-6 px-4 text-6xl font-black leading-[0.84] tracking-[-0.07em] text-fg md:text-8xl lg:text-[8.5rem]"
           style={{ fontFamily: "'Space Grotesk', sans-serif" }}
         >
-          <span className="">Jayesh Shinde</span>
+          <span>Jayesh</span>
+          <span className="block text-fg-muted">Shinde.</span>
         </motion.h1>
 
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex items-start justify-center gap-4 mb-8 max-w-4xl px-4"
+          className="mb-7 flex max-w-2xl items-start justify-center gap-4 px-4"
         >
           <div>
             <p className="text-sm font-light leading-relaxed text-fg-muted md:text-base lg:text-lg">
-              Building scalable mobile apps with Flutter, backed by solid
-              backend systems. Focused on clean architecture, performance, and
-              real-world impact.
+              I build production Flutter apps, backend platforms, and connected
+              IoT systems from device communication to cloud deployment.
             </p>
           </div>
         </motion.div>
 
-        {/* <motion.button
-                onClick={() =>
-                  document
-                    .getElementById("contact")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group relative mt-4 overflow-hidden rounded-full bg-gradient-to-r from-accent to-accent-secondary px-8 py-4 font-bold text-white shadow-lg shadow-accent/50 transition-all"
-              >
-                <span className="relative z-10">Get In Touch</span>
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-accent-muted to-accent-secondary"
-                  initial={{ x: "-100%" }}
-                  whileHover={{ x: 0 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.button> */}
+        <motion.div
+          initial={{ y: 16, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.45 }}
+          className="flex flex-wrap items-center justify-center gap-3"
+        >
+          <a
+            href={resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-fg px-5 py-3 text-sm font-semibold text-surface transition-transform hover:-translate-y-0.5"
+          >
+            View résumé <FiDownload aria-hidden />
+          </a>
+          <a
+            href="#projects"
+            className="inline-flex items-center gap-2 rounded-full border border-border-strong bg-surface/70 px-5 py-3 text-sm font-semibold text-fg backdrop-blur-sm transition-colors hover:bg-surface-elevated"
+          >
+            Selected work <FiArrowDownRight aria-hidden />
+          </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+          className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs uppercase tracking-[0.14em] text-fg-subtle"
+        >
+          <span>2+ years</span><span aria-hidden>·</span><span>3+ production apps</span><span aria-hidden>·</span><span>Pune, India</span>
+        </motion.div>
 
         {/* Scroll indicator */}
         <motion.div

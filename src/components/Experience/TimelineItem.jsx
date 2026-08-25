@@ -21,7 +21,7 @@ const TimelineItem = ({
       {/* Timeline dot */}
       <motion.div
         className="absolute left-[-4px] z-10 h-3 w-3 rounded-full border-2 border-surface bg-accent-muted"
-        whileHover={{ scale: 1.5, backgroundColor: "#10b981" }}
+        whileHover={{ scale: 1.5 }}
         transition={{ type: "spring", stiffness: 400 }}
       />
 
