@@ -101,7 +101,14 @@ const SKILL_GROUPS = [
 
 export default function SkillSection() {
   return (
-    <section id="skills" className="scroll-mt-24 border-b border-border py-24">
+    <motion.section
+      id="skills"
+      className="scroll-mt-24 border-b border-border py-24"
+      initial={{ opacity: 0, y: 80, scale: 0.985 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, amount: 0.06 }}
+      transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+    >
       <div className="mb-10 sm:mb-12">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
@@ -135,6 +142,6 @@ export default function SkillSection() {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

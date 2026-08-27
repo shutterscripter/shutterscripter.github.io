@@ -15,7 +15,14 @@ const ProjectSection = () => {
   const list = HOME_PROJECTS[activeTab];
 
   return (
-    <section id="projects" className="scroll-mt-24 py-24">
+    <motion.section
+      id="projects"
+      className="scroll-mt-24 py-24"
+      initial={{ opacity: 0, y: 80, scale: 0.985 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, amount: 0.08 }}
+      transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+    >
       <div className="mb-8 flex flex-col gap-4 sm:mb-12 sm:flex-row sm:items-center sm:justify-between">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -93,12 +100,12 @@ const ProjectSection = () => {
           transition={{ duration: 0.2 }}
           className="divide-y divide-border border-border"
         >
-          {list.map((project) => (
-            <ProjectListItem key={project.title} {...project} />
+          {list.map((project, index) => (
+            <ProjectListItem key={project.title} {...project} index={index} />
           ))}
         </motion.div>
       </AnimatePresence>
-    </section>
+    </motion.section>
   );
 };
 

@@ -37,7 +37,7 @@ const IntroText = () => {
       </div>
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center p-4 pb-32 text-center">
-        <AnimatedRoleBadge />
+        {/* <AnimatedRoleBadge /> */}
         <motion.h1
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -99,7 +99,7 @@ const IntroText = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="absolute bottom-40 flex flex-col items-center gap-2"
+          className="absolute bottom-10 flex flex-col items-center gap-2"
         >
           <span className="text-sm text-fg-muted">Scroll to explore</span>
           <motion.div

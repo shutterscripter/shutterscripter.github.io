@@ -23,9 +23,13 @@ const ArticleSection = () => {
   ];
 
   return (
-    <section
+    <motion.section
       id="articles"
       className="scroll-mt-24 border-b border-border py-24"
+      initial={{ opacity: 0, y: 80, scale: 0.985 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, amount: 0.08 }}
+      transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
     >
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
@@ -81,7 +85,7 @@ const ArticleSection = () => {
           View all articles
         </button>
       </motion.div>
-    </section>
+    </motion.section>
   );
 };
 

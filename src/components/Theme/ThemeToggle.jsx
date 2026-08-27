@@ -14,7 +14,7 @@ export function ThemeToggle() {
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="fixed right-4 top-4 z-100 flex h-11 w-11 items-center justify-center rounded-full border border-border bg-surface-elevated/90 text-fg shadow-lg backdrop-blur-md transition-colors hover:bg-surface-hover dark:bg-surface-muted/90 dark:hover:bg-surface-hover"
+      className="fixed right-[6.25rem] top-4 z-100 flex h-11 w-11 items-center justify-center rounded-full border border-border bg-surface-elevated/90 text-fg shadow-lg backdrop-blur-md transition-[right,background-color] hover:bg-surface-hover sm:right-[7.75rem] dark:bg-surface-muted/90 dark:hover:bg-surface-hover"
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
       {isDark ? (

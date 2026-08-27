@@ -6,7 +6,14 @@ import TimelineItem from "./TimelineItem";
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="border-b border-border py-24">
+    <motion.section
+      id="experience"
+      className="scroll-mt-24 border-b border-border py-24"
+      initial={{ opacity: 0, y: 80, scale: 0.985 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, amount: 0.05 }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+    >
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -106,7 +113,7 @@ const ExperienceSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
