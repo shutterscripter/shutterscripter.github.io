@@ -49,7 +49,7 @@ const IntroText = () => {
           <span className="block text-fg-muted">Shinde.</span>
         </motion.h1>
 
-        <motion.div
+        {/* <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
@@ -57,11 +57,12 @@ const IntroText = () => {
         >
           <div>
             <p className="text-sm font-light leading-relaxed text-fg-muted md:text-base lg:text-lg">
-              I build production Flutter apps, backend platforms, and connected
-              IoT systems from device communication to cloud deployment.
+              I build production Flutter apps and scalable backend systems,
+              shaping complete products from system design and architecture to
+              development and deployment.
             </p>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         <motion.div
           initial={{ y: 16, opacity: 0 }}
