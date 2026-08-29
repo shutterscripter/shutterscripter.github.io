@@ -2,12 +2,14 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useLenis } from "lenis/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 import logoBlack from "../../assets/jayesh-logo-black.png";
 import logoWhite from "../../assets/jayesh-logo-white.png";
 
 const SECTION_IDS = ["projects", "skills", "experience", "contact"];
 
 const BottomNav = () => {
+  const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -76,13 +78,36 @@ const BottomNav = () => {
     }, 550);
   };
 
-  const navItems = ["Home", "Projects", "Skills", "Experience", "Contact"].map(
-    (name) => ({
-      name,
-      id: name.toLowerCase(),
-      onClick: () => scrollToSection(name.toLowerCase()),
-    }),
-  );
+  const openPage = (path) => {
+    setIsMenuOpen(false);
+    navigate(path);
+  };
+
+  const navItems = [
+    { name: "Home", id: "home", onClick: () => scrollToSection("home") },
+    {
+      name: "Projects",
+      id: "projects",
+      onClick: () => scrollToSection("projects"),
+    },
+    { name: "Skills", id: "skills", onClick: () => scrollToSection("skills") },
+    {
+      name: "Experience",
+      id: "experience",
+      onClick: () => scrollToSection("experience"),
+    },
+    {
+      name: "Bookshelf",
+      id: "bookshelf",
+      onClick: () => openPage("/bookshelf"),
+    },
+    { name: "Blogs", id: "blogs", onClick: () => openPage("/blogs") },
+    {
+      name: "Contact",
+      id: "contact",
+      onClick: () => scrollToSection("contact"),
+    },
+  ];
 
   return (
     <>
@@ -177,7 +202,7 @@ const BottomNav = () => {
             )}
 
             <motion.nav
-              className="absolute inset-y-0 right-0 flex w-[min(92vw,760px)] flex-col overflow-hidden bg-surface px-6 pb-10 pt-32 sm:px-12"
+              className="absolute inset-y-0 right-0 flex w-[min(92vw,760px)] flex-col overflow-x-hidden overflow-y-auto bg-surface px-6 pb-10 pt-32 sm:px-12"
               variants={{ closed: { x: "110%" }, open: { x: 0 } }}
               transition={{ duration: 0.65, ease: [0.65, 0.01, 0.05, 0.99] }}
               aria-label="Expanded navigation"

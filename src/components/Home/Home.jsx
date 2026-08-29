@@ -7,7 +7,6 @@ import Hero from "../Hero/Hero";
 import ExperienceSection from "../Experience/ExperienceSection";
 import ProjectSection from "../Projects/ProjectSection";
 import SkillSection from "../Skills/SkillSection";
-import ArticleSection from "../Articles/ArticleSection";
 import ContactSection from "../Contact/ContactSection";
 
 export const Home = () => {
@@ -48,7 +47,6 @@ export const Home = () => {
             <ProjectSection />
             <SkillSection />
             <ExperienceSection />
-            <ArticleSection />
             <ContactSection />
           </div>
         </ReactLenis>

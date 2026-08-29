@@ -25,6 +25,7 @@
   --accent: #18181b;
   --accent-muted: #3f3f46;
   --accent-secondary: #71717a;
+  --link: #2563eb;
 
   /* Hero / ambient (derived from brand) */
   --cursor-glow: color-mix(in srgb, var(--accent) 12%, transparent);
@@ -47,6 +48,7 @@
   --accent: #fafafa;
   --accent-muted: #d4d4d8;
   --accent-secondary: #71717a;
+  --link: #60a5fa;
 
   --cursor-glow: color-mix(in srgb, var(--accent) 15%, transparent);
   --grid-line: rgba(128, 128, 128, 0.07);
@@ -69,6 +71,7 @@
   --color-accent: var(--accent);
   --color-accent-muted: var(--accent-muted);
   --color-accent-secondary: var(--accent-secondary);
+  --color-link: var(--link);
 
   --font-vorcas: "Vorcas", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
 }
