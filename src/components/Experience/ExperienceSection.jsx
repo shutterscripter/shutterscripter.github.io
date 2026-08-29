@@ -14,13 +14,13 @@ const ExperienceSection = () => {
       viewport={{ once: true, amount: 0.05 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
     >
-      <motion.h2
+      {/* <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         className="mb-16 text-center text-2xl font-bold"
       >
         Experience & Education
-      </motion.h2>
+      </motion.h2> */}
 
       <div className="max-w-5xl mx-auto">
         {/* Experience */}

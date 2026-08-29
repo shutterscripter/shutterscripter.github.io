@@ -43,7 +43,6 @@ const IntroText = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-6 px-4 text-6xl font-black leading-[0.84] tracking-[-0.07em] text-fg md:text-8xl lg:text-[8.5rem]"
-          style={{ fontFamily: "'Space Grotesk', sans-serif" }}
         >
           <span>Jayesh</span>
           <span className="block text-fg-muted">Shinde.</span>

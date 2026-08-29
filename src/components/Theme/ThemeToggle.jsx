@@ -1,15 +1,57 @@
 import { motion } from "framer-motion";
 import { FiMoon, FiSun } from "react-icons/fi";
+import { flushSync } from "react-dom";
 import { useTheme } from "../../context/ThemeContext";
 
 export function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
   const isDark = theme === "dark";
 
+  const handleThemeChange = (event) => {
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (!document.startViewTransition || reducedMotion) {
+      toggleTheme();
+      return;
+    }
+
+    const bounds = event.currentTarget.getBoundingClientRect();
+    const x = bounds.left + bounds.width / 2;
+    const y = bounds.top + bounds.height / 2;
+    const radius = Math.hypot(
+      Math.max(x, window.innerWidth - x),
+      Math.max(y, window.innerHeight - y),
+    );
+
+    const transition = document.startViewTransition(() => {
+      flushSync(() => toggleTheme());
+    });
+
+    transition.ready
+      .then(() => {
+        document.documentElement.animate(
+          {
+            clipPath: [
+              `circle(0px at ${x}px ${y}px)`,
+              `circle(${radius}px at ${x}px ${y}px)`,
+            ],
+          },
+          {
+            duration: 650,
+            easing: "cubic-bezier(0.65, 0.01, 0.05, 0.99)",
+            pseudoElement: "::view-transition-new(root)",
+          },
+        );
+      })
+      .catch(() => {});
+  };
+
   return (
     <motion.button
       type="button"
-      onClick={toggleTheme}
+      onClick={handleThemeChange}
       initial={{ opacity: 0, y: -8 }}
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.05 }}
