@@ -30,9 +30,14 @@ export function BookshelfPage() {
             <li key={`${book.title}-${book.author}`} className="flex items-start gap-3">
               <span className="mt-0.5 text-link">•</span>
               <p className="leading-relaxed">
-                <span className="font-medium text-link underline-offset-4 hover:underline">
+                <a
+                  href={book.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-link underline-offset-4 hover:underline"
+                >
                   {book.title}
-                </span>{" "}
+                </a>{" "}
                 <span className="text-fg-muted">by {book.author}</span>
               </p>
             </li>
