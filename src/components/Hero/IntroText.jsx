@@ -91,7 +91,13 @@ const IntroText = () => {
           transition={{ delay: 0.8 }}
           className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs uppercase tracking-[0.14em] text-fg-subtle"
         >
-          <span>2+ years</span><span aria-hidden>·</span><span>3+ production apps</span><span aria-hidden>·</span><span>Pune, India</span>
+          <span>2+ years</span>
+          <span aria-hidden>·</span>
+          <span>3+ production apps</span>
+          <span aria-hidden>·</span>
+          <span>1+ published package</span>
+          <span aria-hidden>·</span>
+          <span>Pune, India</span>
         </motion.div>
 
         {/* Scroll indicator */}

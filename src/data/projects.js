@@ -5,6 +5,14 @@ export const GITHUB_PROFILE_URL =
 export const PROJECTS = {
   mobile: [
     {
+      title: "Drawably Flutter",
+      description:
+        "Published a Flutter UI library for animated hand-drawn controls and decorations. Its deterministic seeded sketches gently boil between three cached frames for a lively, consistent visual effect.",
+      tags: ["Flutter", "Dart", "CustomPainter", "Animation"],
+      link: "https://pub.dev/packages/drawably_flutter",
+      badge: "Package",
+    },
+    {
       title: "Data Peek",
       description:
         "Contributed UI improvements to a cross-platform SQL client supporting PostgreSQL, MySQL, Microsoft SQL Server, and SQLite.",
@@ -55,6 +63,14 @@ export const PROJECTS = {
 /** Curated list for the home page projects section. Mobile tab shows featured work; Backend matches /projects. */
 export const HOME_PROJECTS = {
   mobile: [
+    {
+      title: "Drawably Flutter",
+      description:
+        "Published a Flutter UI library for animated hand-drawn controls and decorations. Its deterministic seeded sketches gently boil between three cached frames for a lively, consistent visual effect.",
+      tags: ["Flutter", "Dart", "CustomPainter", "Animation"],
+      link: "https://pub.dev/packages/drawably_flutter",
+      badge: "Package",
+    },
     {
       title: "Data Peek",
       description:
