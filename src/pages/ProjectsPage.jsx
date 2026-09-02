@@ -7,7 +7,7 @@ import ProjectListItem from "../components/Projects/ProjectListItem";
 import { GITHUB_PROFILE_URL, PROJECTS } from "../data/projects";
 
 const TABS = [
-  { id: "mobile", label: "Mobile" },
+  { id: "mobile", label: "Apps" },
   { id: "backend", label: "Backend" },
 ];
 
@@ -108,6 +108,7 @@ export function ProjectsPage() {
                 description={project.description}
                 tags={project.tags}
                 link={project.link}
+                badge={project.badge}
               />
             ))}
           </motion.div>

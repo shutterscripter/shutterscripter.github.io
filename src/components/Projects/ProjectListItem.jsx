@@ -9,6 +9,7 @@ export default function ProjectListItem({
   description,
   tags,
   link,
+  badge,
   index = 0,
 }) {
   const hasLink = Boolean(link && link !== "#");
@@ -27,6 +28,11 @@ export default function ProjectListItem({
     >
       <div className="flex flex-row flex-wrap items-center gap-3">
         <h3 className="text-lg font-semibold text-fg">{title}</h3>
+        {badge ? (
+          <span className="rounded-full border border-border-strong bg-surface-elevated px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-fg-muted dark:bg-surface-muted">
+            {badge}
+          </span>
+        ) : null}
         {hasLink ? (
           <a
             href={link}

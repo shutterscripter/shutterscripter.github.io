@@ -5,55 +5,49 @@ export const GITHUB_PROFILE_URL =
 export const PROJECTS = {
   mobile: [
     {
+      title: "Data Peek",
+      description:
+        "Contributed UI improvements to a cross-platform SQL client supporting PostgreSQL, MySQL, Microsoft SQL Server, and SQLite.",
+      tags: ["Electron", "React", "TypeScript", "TanStack"],
+      link: "https://github.com/Rohithgilla12/data-peek",
+      badge: "Open Source",
+    },
+    {
+      title: "ERP System with RAG-based AI Assistant",
+      description:
+        "Implemented backend services and Flutter application features for an ERP platform managing employee data, inventory, and operational workflows. Built APIs for real-time stock tracking, employee management, and reporting, then integrated a RAG assistant for intelligent document queries, semantic search, and contextual responses.",
+      tags: ["Node.js", "Ollama", "ChromaDB", "SQL", "Flutter"],
+      link: "https://play.google.com/store/apps/details?id=com.sunshineiotronics.sunshineone&pcampaignid=web_share",
+    },
+    {
       title: "Io-Net",
       description:
-        "A cloud-connected IoT platform for real-time monitoring, remote control, scheduling, and multi-user device sharing, with PIN-based onboarding and atomic credit deductions.",
+        "Developed a scalable cloud-connected IoT platform for real-time monitoring, remote device control, scheduling automation, and multi-user device sharing. Built secure PIN-based device onboarding, Express.js and MongoDB backend services, and an automated credit deduction system with atomic daily balance updates.",
       tags: ["Flutter", "Express.js", "MongoDB", "IoT"],
-      link: GITHUB_PROFILE_URL,
+      link: "https://play.google.com/store/apps/details?id=com.sunshineiotronics.ionet",
     },
     {
       title: "USB-Link",
       description:
-        "A Flutter diagnostics tool for live USB CDC communication with embedded devices, including firmware configuration, alarm tracking, health monitoring, and Excel telemetry exports.",
+        "Built a Flutter application for real-time communication with embedded devices using USB CDC protocols. Implemented live parameter monitoring, firmware configuration, alarm tracking, and hardware diagnostics, with Excel log export and telemetry reporting for debugging, analytics, and operational monitoring.",
       tags: ["Flutter", "USB CDC", "Embedded", "Excel"],
-      link: GITHUB_PROFILE_URL,
+      link: "https://play.google.com/store/apps/details?id=com.sunshineiotronics.usb_monitor",
     },
     {
       title: "DialTrack",
       description:
-        "A Flutter telecom analytics application with call-pattern insights, interactive activity breakdowns, and CSV-based bulk dialing workflows.",
+        "Developed a Flutter telecom analytics application using GetX and Firebase for call log analysis and automated dialing workflows. Built insights for repeated callers, call duration trends, and activity breakdowns with interactive dashboards, plus CSV-based bulk call automation for structured outreach.",
       tags: ["Flutter", "GetX", "Firebase", "CSV"],
-      link: GITHUB_PROFILE_URL,
+      link: "https://github.com/shutterscripter/dialtrack",
     },
   ],
   backend: [
     {
-      title: "ERP System with RAG Assistant",
+      title: "URL Shortener",
       description:
-        "An ERP platform for employee, inventory, and operational workflows with real-time stock tracking and reporting. Its RAG assistant processes documents and returns contextual answers through a semantic retrieval pipeline.",
-      tags: ["Node.js", "Ollama", "ChromaDB", "SQL", "Flutter"],
-      link: GITHUB_PROFILE_URL,
-    },
-    {
-      title: "Io-Net",
-      description:
-        "A cloud-connected IoT platform for real-time monitoring, remote control, scheduling, and multi-user device sharing. Includes PIN-based onboarding and atomic daily credit deductions for reliable service management.",
-      tags: ["Express.js", "MongoDB", "IoT", "Flutter"],
-      link: GITHUB_PROFILE_URL,
-    },
-    {
-      title: "USB-Link",
-      description:
-        "A Flutter diagnostics tool for real-time USB CDC communication with embedded devices. It monitors live parameters, firmware settings, alarms, and hardware health, with Excel exports for telemetry and debugging.",
-      tags: ["Flutter", "USB CDC", "Embedded", "Excel"],
-      link: GITHUB_PROFILE_URL,
-    },
-    {
-      title: "DialTrack",
-      description:
-        "A telecom analytics and call-management app with repeated-caller insights, duration trends, interactive activity breakdowns, and CSV-powered bulk dialing workflows.",
-      tags: ["Flutter", "GetX", "Firebase", "CSV"],
-      link: GITHUB_PROFILE_URL,
+        "Built a high-performance REST API for creating and resolving short URLs with custom aliases, configurable expiration, URL validation, redirect analytics, and IP-based rate limiting. Used Redis for fast persistence and packaged the service with Docker Compose.",
+      tags: ["Go", "Fiber", "Redis", "Docker", "REST API"],
+      link: "https://github.com/shutterscripter/golang_projects/tree/main/url_shortner",
     },
   ],
 };
@@ -62,25 +56,40 @@ export const PROJECTS = {
 export const HOME_PROJECTS = {
   mobile: [
     {
+      title: "Data Peek",
+      description:
+        "Contributed UI improvements to a cross-platform SQL client supporting PostgreSQL, MySQL, Microsoft SQL Server, and SQLite.",
+      tags: ["Electron", "React", "TypeScript", "TanStack"],
+      link: "https://github.com/Rohithgilla12/data-peek",
+      badge: "Open Source",
+    },
+    {
+      title: "ERP System with RAG-based AI Assistant",
+      description:
+        "Implemented backend services and Flutter application features for an ERP platform managing employee data, inventory, and operational workflows. Built APIs for real-time stock tracking, employee management, and reporting, then integrated a RAG assistant for intelligent document queries, semantic search, and contextual responses.",
+      tags: ["Node.js", "Ollama", "ChromaDB", "SQL", "Flutter"],
+      link: "https://play.google.com/store/apps/details?id=com.sunshineiotronics.sunshineone&pcampaignid=web_share",
+    },
+    {
       title: "Io-Net",
       description:
-        "A cloud-connected IoT platform for real-time monitoring, remote control, scheduling, and multi-user device sharing. Built with PIN-based onboarding and reliable atomic daily credit deductions.",
-      tags: ["Express.js", "MongoDB", "IoT"],
-      link: GITHUB_PROFILE_URL,
+        "Developed a scalable cloud-connected IoT platform for real-time monitoring, remote device control, scheduling automation, and multi-user device sharing. Built secure PIN-based device onboarding, Express.js and MongoDB backend services, and an automated credit deduction system with atomic daily balance updates.",
+      tags: ["Flutter", "Express.js", "MongoDB", "IoT"],
+      link: "https://play.google.com/store/apps/details?id=com.sunshineiotronics.ionet",
     },
     {
       title: "USB-Link",
       description:
-        "A Flutter hardware interface for real-time USB CDC communication. It surfaces device parameters, firmware settings, alarms, and system health, with Excel log exports for diagnostics and analysis.",
-      tags: ["Flutter", "USB CDC", "Embedded"],
-      link: GITHUB_PROFILE_URL,
+        "Built a Flutter application for real-time communication with embedded devices using USB CDC protocols. Implemented live parameter monitoring, firmware configuration, alarm tracking, and hardware diagnostics, with Excel log export and telemetry reporting for debugging, analytics, and operational monitoring.",
+      tags: ["Flutter", "USB CDC", "Embedded", "Excel"],
+      link: "https://play.google.com/store/apps/details?id=com.sunshineiotronics.usb_monitor",
     },
     {
       title: "DialTrack",
       description:
-        "A telecom analytics and automation tool that turns call logs into repeated-caller, duration, and activity insights, with interactive breakdowns and CSV-based bulk dialing.",
-      tags: ["Flutter", "GetX", "Firebase"],
-      link: GITHUB_PROFILE_URL,
+        "Developed a Flutter telecom analytics application using GetX and Firebase for call log analysis and automated dialing workflows. Built insights for repeated callers, call duration trends, and activity breakdowns with interactive dashboards, plus CSV-based bulk call automation for structured outreach.",
+      tags: ["Flutter", "GetX", "Firebase", "CSV"],
+      link: "https://github.com/shutterscripter/dialtrack",
     },
     {
       title: "News Summarization App",

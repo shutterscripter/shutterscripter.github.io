@@ -6,7 +6,7 @@ import ProjectListItem from "./ProjectListItem";
 import { HOME_PROJECTS } from "../../data/projects";
 
 const TABS = [
-  { id: "mobile", label: "Mobile" },
+  { id: "mobile", label: "Apps" },
   { id: "backend", label: "Backend" },
 ];
 
