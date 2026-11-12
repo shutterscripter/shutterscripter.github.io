@@ -68,6 +68,39 @@
   --grid-line: rgba(128, 128, 128, 0.07);
 }
 
+/* --------------------------------------------------------------------------
+   Footer line-art scene (components/Contact/streetScene.js).
+   Ink is the text colour and paper the page surface, so it follows the theme.
+   -------------------------------------------------------------------------- */
+.footer-scene {
+  color: var(--fg);
+  --scene-paper: var(--surface);
+  --scene-accent: #c96a45;
+  --scene-rock-far: #d9d9de;
+  --scene-rock-near: #b9b9c0;
+  --scene-snow: #ffffff;
+}
+
+.dark .footer-scene {
+  --scene-accent: #b85f3f;
+  --scene-rock-far: #34343b;
+  --scene-rock-near: #212126;
+  --scene-snow: #e4e4e7;
+}
+
+.footer-scene svg {
+  display: block;
+  width: 100%;
+}
+
+.footer-scene .pp {
+  fill: var(--scene-paper);
+}
+
+.footer-scene .ps {
+  stroke: var(--scene-paper);
+}
+
 /* Maps tokens to Tailwind utilities: bg-surface, text-fg, border-border, text-accent, … */
 @theme inline {
   --color-surface: var(--surface);

@@ -5,6 +5,28 @@ export const GITHUB_PROFILE_URL =
 export const PROJECTS = {
   mobile: [
     {
+      title: "Shellway",
+      description:
+        "Built and launched a desktop SSH terminal and SFTP client for macOS, Windows, and Linux. Features a flexible split-pane terminal workspace, saved connections with credentials kept on-device, and auto-updates, backed by an Express and Neon Postgres billing API with one-time Pro licensing.",
+      tags: ["Electron", "React", "xterm.js", "ssh2", "Express", "Postgres"],
+      link: "https://shellway.in/",
+      badge: "Product",
+    },
+    {
+      title: "PMM (Personal Money Management)",
+      description:
+        "Built a private, self-hosted personal finance web app that tracks EMIs, savings, and a monthly budget in one place. Generates month-by-month loan schedules, keeps savings across banks and brokers as a deposit and withdrawal ledger, and splits spending by the 50/30/20 rule. Uses Next.js Server Components and Server Actions over a Drizzle data layer, with Vitest and Playwright tests and Docker deploys to AWS EC2 with automatic rollback.",
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "Postgres",
+        "Drizzle ORM",
+        "Better Auth",
+        "Docker",
+      ],
+      link: "https://pmm.shellway.in/",
+    },
+    {
       title: "Drawably Flutter",
       description:
         "Published a Flutter UI library for animated hand-drawn controls and decorations. Its deterministic seeded sketches gently boil between three cached frames for a lively, consistent visual effect.",
@@ -63,6 +85,28 @@ export const PROJECTS = {
 /** Curated list for the home page projects section. Mobile tab shows featured work; Backend matches /projects. */
 export const HOME_PROJECTS = {
   mobile: [
+    {
+      title: "Shellway",
+      description:
+        "Built and launched a desktop SSH terminal and SFTP client for macOS, Windows, and Linux. Features a flexible split-pane terminal workspace, saved connections with credentials kept on-device, and auto-updates, backed by an Express and Neon Postgres billing API with one-time Pro licensing.",
+      tags: ["Electron", "React", "xterm.js", "ssh2", "Express", "Postgres"],
+      link: "https://shellway.in/",
+      badge: "Product",
+    },
+    {
+      title: "PMM (Personal Money Management)",
+      description:
+        "Built a private, self-hosted personal finance web app that tracks EMIs, savings, and a monthly budget in one place. Generates month-by-month loan schedules, keeps savings across banks and brokers as a deposit and withdrawal ledger, and splits spending by the 50/30/20 rule. Uses Next.js Server Components and Server Actions over a Drizzle data layer, with Vitest and Playwright tests and Docker deploys to AWS EC2 with automatic rollback.",
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "Postgres",
+        "Drizzle ORM",
+        "Better Auth",
+        "Docker",
+      ],
+      link: "https://pmm.shellway.in/",
+    },
     {
       title: "Drawably Flutter",
       description:

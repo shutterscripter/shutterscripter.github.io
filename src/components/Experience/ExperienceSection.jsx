@@ -8,7 +8,7 @@ const ExperienceSection = () => {
   return (
     <motion.section
       id="experience"
-      className="scroll-mt-24 border-b border-border py-24"
+      className="scroll-mt-24 py-24"
       initial={{ opacity: 0, y: 80, scale: 0.985 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, amount: 0.05 }}
