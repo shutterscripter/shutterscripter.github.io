@@ -39,7 +39,8 @@ export function BlogsPage() {
                   {blog.title}
                 </a>{" "}
                 <span className="text-fg-muted">
-                  — {blog.source}, {blog.date}
+                  — {blog.source}
+                  {blog.date ? `, ${blog.date}` : ""}
                 </span>
               </p>
             </li>
